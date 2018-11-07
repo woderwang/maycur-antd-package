@@ -2355,6 +2355,7 @@ mark {
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
 /* gray */
 /* blue */
+/* red */
 .ant-select-auto-complete {
   font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
@@ -2443,6 +2444,7 @@ mark {
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
 /* gray */
 /* blue */
+/* red */
 .ant-select {
   font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
@@ -3042,6 +3044,7 @@ mark {
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
 /* gray */
 /* blue */
+/* red */
 .ant-input {
   font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-variant: tabular-nums;
@@ -3525,6 +3528,9 @@ textarea.ant-input {
 /* stylelint-disable no-duplicate-selectors */
 /* stylelint-disable */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
+/* gray */
+/* blue */
+/* red */
 .ant-btn {
   line-height: 1.5;
   display: inline-block;
@@ -3704,8 +3710,8 @@ textarea.ant-input {
 }
 .ant-btn-primary {
   color: #fff;
-  background-color: #1890ff;
-  border-color: #1890ff;
+  background-color: #1199FF;
+  border-color: #1199FF;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
   -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.035);
           box-shadow: 0 2px 0 rgba(0, 0, 0, 0.035);
@@ -3772,9 +3778,9 @@ textarea.ant-input {
 .ant-btn-primary[disabled]:active,
 .ant-btn-primary.disabled.active,
 .ant-btn-primary[disabled].active {
-  color: rgba(0, 0, 0, 0.25);
-  background-color: #f5f5f5;
-  border-color: #d9d9d9;
+  color: #fff;
+  background-color: rgba(17, 153, 255, 0.5);
+  border-color: transparent;
   text-shadow: none;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -3934,6 +3940,406 @@ textarea.ant-input {
   right: 0;
   background: transparent;
 }
+.ant-btn-mk-dashed {
+  color: #3296fa;
+  background-color: #fff;
+  border-color: #d9d9d9;
+  border-style: dashed;
+}
+.ant-btn-mk-dashed > a:only-child {
+  color: currentColor;
+}
+.ant-btn-mk-dashed > a:only-child:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: transparent;
+}
+.ant-btn-mk-dashed:hover,
+.ant-btn-mk-dashed:focus {
+  color: #40a9ff;
+  background-color: #fff;
+  border-color: #40a9ff;
+}
+.ant-btn-mk-dashed:hover > a:only-child,
+.ant-btn-mk-dashed:focus > a:only-child {
+  color: currentColor;
+}
+.ant-btn-mk-dashed:hover > a:only-child:after,
+.ant-btn-mk-dashed:focus > a:only-child:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: transparent;
+}
+.ant-btn-mk-dashed:active,
+.ant-btn-mk-dashed.active {
+  color: #096dd9;
+  background-color: #fff;
+  border-color: #096dd9;
+}
+.ant-btn-mk-dashed:active > a:only-child,
+.ant-btn-mk-dashed.active > a:only-child {
+  color: currentColor;
+}
+.ant-btn-mk-dashed:active > a:only-child:after,
+.ant-btn-mk-dashed.active > a:only-child:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: transparent;
+}
+.ant-btn-mk-dashed.disabled,
+.ant-btn-mk-dashed[disabled],
+.ant-btn-mk-dashed.disabled:hover,
+.ant-btn-mk-dashed[disabled]:hover,
+.ant-btn-mk-dashed.disabled:focus,
+.ant-btn-mk-dashed[disabled]:focus,
+.ant-btn-mk-dashed.disabled:active,
+.ant-btn-mk-dashed[disabled]:active,
+.ant-btn-mk-dashed.disabled.active,
+.ant-btn-mk-dashed[disabled].active {
+  color: rgba(17, 153, 255, 0.5);
+  background-color: #f7f7f7;
+  border-color: #d9d9d9;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.ant-btn-mk-dashed.disabled > a:only-child,
+.ant-btn-mk-dashed[disabled] > a:only-child,
+.ant-btn-mk-dashed.disabled:hover > a:only-child,
+.ant-btn-mk-dashed[disabled]:hover > a:only-child,
+.ant-btn-mk-dashed.disabled:focus > a:only-child,
+.ant-btn-mk-dashed[disabled]:focus > a:only-child,
+.ant-btn-mk-dashed.disabled:active > a:only-child,
+.ant-btn-mk-dashed[disabled]:active > a:only-child,
+.ant-btn-mk-dashed.disabled.active > a:only-child,
+.ant-btn-mk-dashed[disabled].active > a:only-child {
+  color: currentColor;
+}
+.ant-btn-mk-dashed.disabled > a:only-child:after,
+.ant-btn-mk-dashed[disabled] > a:only-child:after,
+.ant-btn-mk-dashed.disabled:hover > a:only-child:after,
+.ant-btn-mk-dashed[disabled]:hover > a:only-child:after,
+.ant-btn-mk-dashed.disabled:focus > a:only-child:after,
+.ant-btn-mk-dashed[disabled]:focus > a:only-child:after,
+.ant-btn-mk-dashed.disabled:active > a:only-child:after,
+.ant-btn-mk-dashed[disabled]:active > a:only-child:after,
+.ant-btn-mk-dashed.disabled.active > a:only-child:after,
+.ant-btn-mk-dashed[disabled].active > a:only-child:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: transparent;
+}
+.ant-btn-mk-default {
+  color: #3296fa;
+  background-color: #fff;
+  border-color: #d9d9d9;
+}
+.ant-btn-mk-default > a:only-child {
+  color: currentColor;
+}
+.ant-btn-mk-default > a:only-child:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: transparent;
+}
+.ant-btn-mk-default:hover,
+.ant-btn-mk-default:focus {
+  color: #40a9ff;
+  background-color: #fff;
+  border-color: #40a9ff;
+}
+.ant-btn-mk-default:hover > a:only-child,
+.ant-btn-mk-default:focus > a:only-child {
+  color: currentColor;
+}
+.ant-btn-mk-default:hover > a:only-child:after,
+.ant-btn-mk-default:focus > a:only-child:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: transparent;
+}
+.ant-btn-mk-default:active,
+.ant-btn-mk-default.active {
+  color: #096dd9;
+  background-color: #fff;
+  border-color: #096dd9;
+}
+.ant-btn-mk-default:active > a:only-child,
+.ant-btn-mk-default.active > a:only-child {
+  color: currentColor;
+}
+.ant-btn-mk-default:active > a:only-child:after,
+.ant-btn-mk-default.active > a:only-child:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: transparent;
+}
+.ant-btn-mk-default.disabled,
+.ant-btn-mk-default[disabled],
+.ant-btn-mk-default.disabled:hover,
+.ant-btn-mk-default[disabled]:hover,
+.ant-btn-mk-default.disabled:focus,
+.ant-btn-mk-default[disabled]:focus,
+.ant-btn-mk-default.disabled:active,
+.ant-btn-mk-default[disabled]:active,
+.ant-btn-mk-default.disabled.active,
+.ant-btn-mk-default[disabled].active {
+  color: rgba(17, 153, 255, 0.5);
+  background-color: #f7f7f7;
+  border-color: #d9d9d9;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.ant-btn-mk-default.disabled > a:only-child,
+.ant-btn-mk-default[disabled] > a:only-child,
+.ant-btn-mk-default.disabled:hover > a:only-child,
+.ant-btn-mk-default[disabled]:hover > a:only-child,
+.ant-btn-mk-default.disabled:focus > a:only-child,
+.ant-btn-mk-default[disabled]:focus > a:only-child,
+.ant-btn-mk-default.disabled:active > a:only-child,
+.ant-btn-mk-default[disabled]:active > a:only-child,
+.ant-btn-mk-default.disabled.active > a:only-child,
+.ant-btn-mk-default[disabled].active > a:only-child {
+  color: currentColor;
+}
+.ant-btn-mk-default.disabled > a:only-child:after,
+.ant-btn-mk-default[disabled] > a:only-child:after,
+.ant-btn-mk-default.disabled:hover > a:only-child:after,
+.ant-btn-mk-default[disabled]:hover > a:only-child:after,
+.ant-btn-mk-default.disabled:focus > a:only-child:after,
+.ant-btn-mk-default[disabled]:focus > a:only-child:after,
+.ant-btn-mk-default.disabled:active > a:only-child:after,
+.ant-btn-mk-default[disabled]:active > a:only-child:after,
+.ant-btn-mk-default.disabled.active > a:only-child:after,
+.ant-btn-mk-default[disabled].active > a:only-child:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: transparent;
+}
+.ant-btn-mk-default:hover,
+.ant-btn-mk-default:focus,
+.ant-btn-mk-default:active,
+.ant-btn-mk-default.active {
+  background: #fff;
+  text-decoration: none;
+}
+.ant-btn-gray {
+  color: #3296fa;
+  background-color: #f7f7f7;
+  border-color: #f7f7f7;
+}
+.ant-btn-gray > a:only-child {
+  color: currentColor;
+}
+.ant-btn-gray > a:only-child:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: transparent;
+}
+.ant-btn-gray:hover {
+  color: #1199FF;
+  background-color: #eee;
+  border-color: #eee;
+}
+.ant-btn-gray:hover > a:only-child {
+  color: currentColor;
+}
+.ant-btn-gray:hover > a:only-child:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: transparent;
+}
+.ant-btn-gray:focus {
+  color: #5cb3ff;
+  background-color: #eee;
+  border-color: #eee;
+  -webkit-transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.ant-btn-gray:focus > a:only-child {
+  color: currentColor;
+}
+.ant-btn-gray:focus > a:only-child:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: transparent;
+}
+.ant-btn-gray:active,
+.ant-btn-gray.active {
+  color: #2074d4;
+  background-color: #eee;
+  border-color: #eee;
+}
+.ant-btn-gray:active > a:only-child,
+.ant-btn-gray.active > a:only-child {
+  color: currentColor;
+}
+.ant-btn-gray:active > a:only-child:after,
+.ant-btn-gray.active > a:only-child:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: transparent;
+}
+.ant-btn-gray.disabled,
+.ant-btn-gray[disabled],
+.ant-btn-gray.disabled:hover,
+.ant-btn-gray[disabled]:hover,
+.ant-btn-gray.disabled:focus,
+.ant-btn-gray[disabled]:focus,
+.ant-btn-gray.disabled:active,
+.ant-btn-gray[disabled]:active,
+.ant-btn-gray.disabled.active,
+.ant-btn-gray[disabled].active {
+  color: rgba(17, 153, 255, 0.5);
+  background-color: #f9f9f9;
+  border-color: #f9f9f9;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.ant-btn-gray.disabled > a:only-child,
+.ant-btn-gray[disabled] > a:only-child,
+.ant-btn-gray.disabled:hover > a:only-child,
+.ant-btn-gray[disabled]:hover > a:only-child,
+.ant-btn-gray.disabled:focus > a:only-child,
+.ant-btn-gray[disabled]:focus > a:only-child,
+.ant-btn-gray.disabled:active > a:only-child,
+.ant-btn-gray[disabled]:active > a:only-child,
+.ant-btn-gray.disabled.active > a:only-child,
+.ant-btn-gray[disabled].active > a:only-child {
+  color: currentColor;
+}
+.ant-btn-gray.disabled > a:only-child:after,
+.ant-btn-gray[disabled] > a:only-child:after,
+.ant-btn-gray.disabled:hover > a:only-child:after,
+.ant-btn-gray[disabled]:hover > a:only-child:after,
+.ant-btn-gray.disabled:focus > a:only-child:after,
+.ant-btn-gray[disabled]:focus > a:only-child:after,
+.ant-btn-gray.disabled:active > a:only-child:after,
+.ant-btn-gray[disabled]:active > a:only-child:after,
+.ant-btn-gray.disabled.active > a:only-child:after,
+.ant-btn-gray[disabled].active > a:only-child:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: transparent;
+}
+.ant-btn-text {
+  color: #3296fa;
+  height: auto;
+  padding: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+}
+.ant-btn-text:hover {
+  color: #2074D4;
+}
+.ant-btn-text:focus {
+  color: #2074D4;
+}
+.ant-btn-text:active,
+.ant-btn-text.active {
+  color: #2074D4;
+}
+.ant-btn-text.disabled,
+.ant-btn-text[disabled],
+.ant-btn-text.disabled:hover,
+.ant-btn-text[disabled]:hover,
+.ant-btn-text.disabled:focus,
+.ant-btn-text[disabled]:focus,
+.ant-btn-text.disabled:active,
+.ant-btn-text[disabled]:active,
+.ant-btn-text.disabled.active,
+.ant-btn-text[disabled].active {
+  color: rgba(17, 153, 255, 0.5);
+  background-color: transparent;
+  border: none;
+}
+.ant-btn-text-danger {
+  color: #FF0000;
+  height: auto;
+  padding: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+}
+.ant-btn-text-danger:hover {
+  color: #D0021B;
+}
+.ant-btn-text-danger:focus {
+  color: #D0021B;
+}
+.ant-btn-text-danger:active,
+.ant-btn-text-danger.active {
+  color: #D0021B;
+}
+.ant-btn-text-danger.disabled,
+.ant-btn-text-danger[disabled],
+.ant-btn-text-danger.disabled:hover,
+.ant-btn-text-danger[disabled]:hover,
+.ant-btn-text-danger.disabled:focus,
+.ant-btn-text-danger[disabled]:focus,
+.ant-btn-text-danger.disabled:active,
+.ant-btn-text-danger[disabled]:active,
+.ant-btn-text-danger.disabled.active,
+.ant-btn-text-danger[disabled].active {
+  color: rgba(255, 0, 0, 0.5);
+  background-color: transparent;
+  border: none;
+}
 .ant-btn-dashed {
   color: rgba(0, 0, 0, 0.65);
   background-color: #fff;
@@ -4075,7 +4481,7 @@ textarea.ant-input {
 }
 .ant-btn-danger:focus {
   color: #ff4d4f;
-  background-color: #fff;
+  background-color: transparent;
   border-color: #ff4d4f;
 }
 .ant-btn-danger:focus > a:only-child {
@@ -6571,6 +6977,7 @@ span.ant-radio + * {
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
 /* gray */
 /* blue */
+/* red */
 .ant-cascader {
   font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
@@ -11013,6 +11420,7 @@ span.ant-radio + * {
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
 /* gray */
 /* blue */
+/* red */
 .ant-calendar-picker-container {
   font-size: 14px;
   font-variant: tabular-nums;
@@ -11452,8 +11860,8 @@ span.ant-radio + * {
   -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
           box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
   color: #fff;
-  background-color: #1890ff;
-  border-color: #1890ff;
+  background-color: #1199FF;
+  border-color: #1199FF;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
   -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.035);
           box-shadow: 0 2px 0 rgba(0, 0, 0, 0.035);
@@ -11563,9 +11971,9 @@ span.ant-radio + * {
 .ant-calendar .ant-calendar-ok-btn[disabled]:active,
 .ant-calendar .ant-calendar-ok-btn.disabled.active,
 .ant-calendar .ant-calendar-ok-btn[disabled].active {
-  color: rgba(0, 0, 0, 0.25);
-  background-color: #f5f5f5;
-  border-color: #d9d9d9;
+  color: #fff;
+  background-color: rgba(17, 153, 255, 0.5);
+  border-color: transparent;
   text-shadow: none;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -12504,6 +12912,7 @@ li.ant-calendar-time-picker-select-option-disabled:hover {
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
 /* gray */
 /* blue */
+/* red */
 .ant-time-picker-panel {
   font-size: 14px;
   font-variant: tabular-nums;
@@ -13645,6 +14054,7 @@ textarea.ant-time-picker-input {
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
 /* gray */
 /* blue */
+/* red */
 .ant-form {
   font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
@@ -14409,6 +14819,7 @@ form .ant-input-group-wrapper {
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
 /* gray */
 /* blue */
+/* red */
 .ant-input-number {
   font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-variant: tabular-nums;
@@ -15357,6 +15768,7 @@ textarea.ant-input-number {
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
 /* gray */
 /* blue */
+/* red */
 .ant-pagination {
   font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
@@ -15787,6 +16199,7 @@ textarea.ant-pagination-options-quick-jumper input {
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
 /* gray */
 /* blue */
+/* red */
 .ant-mention-wrapper {
   font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
@@ -18776,6 +19189,7 @@ a.ant-notification-notice-close:focus {
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
 /* gray */
 /* blue */
+/* red */
 .ant-table-wrapper {
   zoom: 1;
 }

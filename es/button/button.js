@@ -184,16 +184,25 @@ var Button = function (_React$Component) {
                     iconNode,
                     kids
                 );
-            } else {
-                // React does not recognize the `htmlType` prop on a DOM element. Here we pick it out of `rest`.
+            } else if (type === 'text') {
                 var htmlType = rest.htmlType,
                     otherProps = __rest(rest, ["htmlType"]);
+                return React.createElement(
+                    'button',
+                    _extends({}, otherProps, { type: htmlType || 'button', className: classes, onClick: this.handleClick, title: title }),
+                    iconNode,
+                    kids
+                );
+            } else {
+                // React does not recognize the `htmlType` prop on a DOM element. Here we pick it out of `rest`.
+                var _htmlType = rest.htmlType,
+                    _otherProps = __rest(rest, ["htmlType"]);
                 return React.createElement(
                     Wave,
                     null,
                     React.createElement(
                         'button',
-                        _extends({}, otherProps, { type: htmlType || 'button', className: classes, onClick: this.handleClick, title: title }),
+                        _extends({}, _otherProps, { type: _htmlType || 'button', className: classes, onClick: this.handleClick, title: title }),
                         iconNode,
                         kids
                     )

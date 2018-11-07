@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import Group from './button-group';
-export declare type ButtonType = 'default' | 'primary' | 'ghost' | 'dashed' | 'danger';
+export declare type ButtonType = 'default' | 'primary' | 'ghost' | 'dashed' | 'danger' | 'text' | 'text-danger' | 'mk-default' | 'mk-dashed' | 'gray';
 export declare type ButtonShape = 'circle' | 'circle-outline';
 export declare type ButtonSize = 'small' | 'default' | 'large';
 export declare type ButtonHTMLType = 'submit' | 'button' | 'reset';
