@@ -481,6 +481,19 @@ textarea.ant-input {
 .ant-input-affix-wrapper-gray .ant-input:active {
   background: #eee;
 }
+.ant-input-affix-wrapper-gray .ant-input:focus::-moz-placeholder,
+.ant-input-affix-wrapper-gray .ant-input:active::-moz-placeholder {
+  color: #959595;
+  opacity: 1;
+}
+.ant-input-affix-wrapper-gray .ant-input:focus:-ms-input-placeholder,
+.ant-input-affix-wrapper-gray .ant-input:active:-ms-input-placeholder {
+  color: #959595;
+}
+.ant-input-affix-wrapper-gray .ant-input:focus::-webkit-input-placeholder,
+.ant-input-affix-wrapper-gray .ant-input:active::-webkit-input-placeholder {
+  color: #959595;
+}
 .ant-input-affix-wrapper-gray .ant-input:focus + .ant-input-suffix svg,
 .ant-input-affix-wrapper-gray .ant-input:active + .ant-input-suffix svg {
   color: #555;

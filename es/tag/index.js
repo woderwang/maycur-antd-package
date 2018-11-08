@@ -101,6 +101,24 @@ var Tag = function (_React$Component) {
             );
         }
     }, {
+        key: 'getTagStyleColor',
+        value: function getTagStyleColor(type) {
+            // if (type) {
+            switch (type) {
+                // case 'normal':
+                //   return '#3296FA'
+                case 'success':
+                    return '#00B600';
+                case 'warning':
+                    return '#EFBC23';
+                default:
+                    return '#3296FA';
+            }
+            // } else {
+            //   return 'rgba(0, 0, 0, 0.65)'
+            // }
+        }
+    }, {
         key: 'render',
         value: function render() {
             var _classNames;
@@ -111,16 +129,30 @@ var Tag = function (_React$Component) {
                 color = _a.color,
                 type = _a.type,
                 size = _a.size,
+                ghost = _a.ghost,
                 className = _a.className,
                 children = _a.children,
                 style = _a.style,
-                otherProps = __rest(_a, ["prefixCls", "closable", "color", "type", "size", "className", "children", "style"]);
+                otherProps = __rest(_a, ["prefixCls", "closable", "color", "type", "size", "ghost", "className", "children", "style"]);
             var closeIcon = closable ? React.createElement(Icon, { type: 'close', onClick: this.handleIconClick }) : '';
             var isPresetColor = this.isPresetColor(color);
             var classString = classNames(prefixCls, (_classNames = {}, _defineProperty(_classNames, prefixCls + '-' + color, isPresetColor), _defineProperty(_classNames, prefixCls + '-has-color', color && !isPresetColor), _defineProperty(_classNames, prefixCls + '-close', this.state.closing), _defineProperty(_classNames, prefixCls + '-' + type, type), _defineProperty(_classNames, prefixCls + '-' + size, size), _classNames), className);
             // fix https://fb.me/react-unknown-prop
             var divProps = omit(otherProps, ['onClose', 'afterClose', 'visible']);
-            var tagStyle = _extends({ backgroundColor: color && !isPresetColor ? color : null }, style);
+            var tagStyle;
+            // if (color === 'geekblue') {
+            //   console.log('ghost', ghost)
+            // }
+            if (ghost) {
+                if (color === 'geekblue') {
+                    console.log('type', type);
+                    console.log('color', type && type != 'mk' ? this.getTagStyleColor(type) : color ? color : 'rgba(0, 0, 0, 0.65)');
+                    console.log('border', type && type != 'mk' ? '1px solid ' + this.getTagStyleColor(type) : color ? '1px solid ' + color : '1px solid #d9d9d9');
+                }
+                tagStyle = _extends({ backgroundColor: '#fff', color: type && type != 'mk' ? this.getTagStyleColor(type) : color ? color : 'rgba(0, 0, 0, 0.65)', border: type && type != 'mk' ? '1px solid ' + this.getTagStyleColor(type) : color ? '1px solid ' + color : '1px solid #d9d9d9' }, style);
+            } else {
+                tagStyle = _extends({ backgroundColor: color && !isPresetColor ? color : null }, style);
+            }
             var tag = this.state.closed ? React.createElement('span', null) : React.createElement(
                 'div',
                 _extends({ 'data-show': !this.state.closing }, divProps, { className: classString, style: tagStyle }),
@@ -161,7 +193,8 @@ Tag.CheckableTag = CheckableTag;
 Tag.defaultProps = {
     prefixCls: 'ant-tag',
     closable: false,
-    size: 'large'
+    size: 'large',
+    ghost: false
 };
 polyfill(Tag);
 export default Tag;

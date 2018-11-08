@@ -3605,6 +3605,19 @@ textarea.ant-input {
 .ant-input-affix-wrapper-gray .ant-input:active {
   background: #eee;
 }
+.ant-input-affix-wrapper-gray .ant-input:focus::-moz-placeholder,
+.ant-input-affix-wrapper-gray .ant-input:active::-moz-placeholder {
+  color: #959595;
+  opacity: 1;
+}
+.ant-input-affix-wrapper-gray .ant-input:focus:-ms-input-placeholder,
+.ant-input-affix-wrapper-gray .ant-input:active:-ms-input-placeholder {
+  color: #959595;
+}
+.ant-input-affix-wrapper-gray .ant-input:focus::-webkit-input-placeholder,
+.ant-input-affix-wrapper-gray .ant-input:active::-webkit-input-placeholder {
+  color: #959595;
+}
 .ant-input-affix-wrapper-gray .ant-input:focus + .ant-input-suffix svg,
 .ant-input-affix-wrapper-gray .ant-input:active + .ant-input-suffix svg {
   color: #555;
@@ -13440,50 +13453,57 @@ textarea.ant-time-picker-input {
   line-height: 16px;
   padding: 0 6px;
 }
+.ant-tag-mk {
+  border: none;
+  border-radius: 1px;
+  padding: 0 8px;
+  height: 22px;
+  line-height: 22px;
+}
 .ant-tag-normal {
   color: #fff;
-  border: none;
+  border: 1px solid #3296fa;
   background: #3296fa;
   border-radius: 1px;
   padding: 0 8px;
-  height: 22px;
-  line-height: 22px;
+  height: 20px;
+  line-height: 20px;
 }
 .ant-tag-success {
   color: #fff;
-  border: none;
+  border: 1px solid #00B600;
   background: #00B600;
   border-radius: 1px;
   padding: 0 8px;
-  height: 22px;
-  line-height: 22px;
+  height: 20px;
+  line-height: 20px;
 }
 .ant-tag-info {
   color: #fff;
-  border: none;
+  border: 1px solid #00B600;
   background: #00B600;
   border-radius: 1px;
   padding: 0 8px;
-  height: 22px;
-  line-height: 22px;
+  height: 20px;
+  line-height: 20px;
 }
 .ant-tag-warning {
   color: #fff;
-  border: none;
+  border: 1px solid #EFBC23;
   background: #EFBC23;
   border-radius: 1px;
   padding: 0 8px;
-  height: 22px;
-  line-height: 22px;
+  height: 20px;
+  line-height: 20px;
 }
 .ant-tag-danger {
   color: #fff;
-  border: none;
+  border: 1px solid #00B600;
   background: #00B600;
   border-radius: 1px;
   padding: 0 8px;
-  height: 22px;
-  line-height: 22px;
+  height: 20px;
+  line-height: 20px;
 }
 .ant-tag > a:first-child:last-child {
   display: inline-block;

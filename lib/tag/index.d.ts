@@ -6,6 +6,7 @@ export interface TagProps extends React.HTMLAttributes<HTMLDivElement> {
     className?: string;
     type?: string;
     size?: string;
+    ghost?: boolean;
     color?: string;
     /** 标签是否可以关闭 */
     closable?: boolean;
@@ -28,6 +29,7 @@ declare class Tag extends React.Component<TagProps, TagState> {
         prefixCls: string;
         closable: boolean;
         size: string;
+        ghost: boolean;
     };
     static getDerivedStateFromProps(nextProps: TagProps, state: TagState): Partial<TagState> | null;
     state: {
@@ -42,6 +44,7 @@ declare class Tag extends React.Component<TagProps, TagState> {
     show: () => void;
     animationEnd: (_: string, existed: boolean) => void;
     isPresetColor(color?: string): boolean;
+    getTagStyleColor(type: string): "#00B600" | "#EFBC23" | "#3296FA";
     render(): JSX.Element;
 }
 export default Tag;
