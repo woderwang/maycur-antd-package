@@ -2,6 +2,12 @@
 /* stylelint-disable no-duplicate-selectors */
 /* stylelint-disable */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
+/* basic */
+/* input */
+/* table */
+/* btn */
+/* select */
+/* tag */
 .ant-tag {
   font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
@@ -35,6 +41,58 @@
 .ant-tag a,
 .ant-tag a:hover {
   color: rgba(0, 0, 0, 0.65);
+}
+.ant-tag-small {
+  font-size: 10px;
+  -webkit-transform: scale(0.8);
+  height: 16px;
+  line-height: 16px;
+  padding: 0 6px;
+}
+.ant-tag-normal {
+  color: #fff;
+  border: none;
+  background: #3296fa;
+  border-radius: 1px;
+  padding: 0 8px;
+  height: 22px;
+  line-height: 22px;
+}
+.ant-tag-success {
+  color: #fff;
+  border: none;
+  background: #00B600;
+  border-radius: 1px;
+  padding: 0 8px;
+  height: 22px;
+  line-height: 22px;
+}
+.ant-tag-info {
+  color: #fff;
+  border: none;
+  background: #00B600;
+  border-radius: 1px;
+  padding: 0 8px;
+  height: 22px;
+  line-height: 22px;
+}
+.ant-tag-warning {
+  color: #fff;
+  border: none;
+  background: #EFBC23;
+  border-radius: 1px;
+  padding: 0 8px;
+  height: 22px;
+  line-height: 22px;
+}
+.ant-tag-danger {
+  color: #fff;
+  border: none;
+  background: #00B600;
+  border-radius: 1px;
+  padding: 0 8px;
+  height: 22px;
+  line-height: 22px;
 }
 .ant-tag > a:first-child:last-child {
   display: inline-block;

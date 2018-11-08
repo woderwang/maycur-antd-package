@@ -22,6 +22,7 @@ import omit from 'omit.js';
 import warning from 'warning';
 import Icon from '../icon';
 var SelectPropTypes = {
+    type: PropTypes.string,
     prefixCls: PropTypes.string,
     className: PropTypes.string,
     size: PropTypes.oneOf(['default', 'large', 'small']),
@@ -54,11 +55,12 @@ var Select = function (_React$Component) {
                 _a$className = _a.className,
                 className = _a$className === undefined ? '' : _a$className,
                 size = _a.size,
+                type = _a.type,
                 mode = _a.mode,
                 suffixIcon = _a.suffixIcon,
-                restProps = __rest(_a, ["prefixCls", "className", "size", "mode", "suffixIcon"]);
+                restProps = __rest(_a, ["prefixCls", "className", "size", "type", "mode", "suffixIcon"]);
             var rest = omit(restProps, ['inputIcon', 'removeIcon', 'clearIcon']);
-            var cls = classNames((_classNames = {}, _defineProperty(_classNames, prefixCls + '-lg', size === 'large'), _defineProperty(_classNames, prefixCls + '-sm', size === 'small'), _classNames), className);
+            var cls = classNames((_classNames = {}, _defineProperty(_classNames, prefixCls + '-lg', size === 'large'), _defineProperty(_classNames, prefixCls + '-sm', size === 'small'), _defineProperty(_classNames, prefixCls + '-' + type, type), _classNames), className);
             var optionLabelProp = _this.props.optionLabelProp;
 
             if (_this.isCombobox()) {

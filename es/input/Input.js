@@ -64,9 +64,10 @@ var Input = function (_React$Component) {
             var _props = this.props,
                 prefixCls = _props.prefixCls,
                 size = _props.size,
-                disabled = _props.disabled;
+                disabled = _props.disabled,
+                type = _props.type;
 
-            return classNames(prefixCls, (_classNames = {}, _defineProperty(_classNames, prefixCls + '-sm', size === 'small'), _defineProperty(_classNames, prefixCls + '-lg', size === 'large'), _defineProperty(_classNames, prefixCls + '-disabled', disabled), _classNames));
+            return classNames(prefixCls, (_classNames = {}, _defineProperty(_classNames, prefixCls + '-sm', size === 'small'), _defineProperty(_classNames, prefixCls + '-lg', size === 'large'), _defineProperty(_classNames, prefixCls + '-' + type, type), _defineProperty(_classNames, prefixCls + '-disabled', disabled), _classNames));
         }
     }, {
         key: 'renderLabeledInput',
@@ -91,7 +92,7 @@ var Input = function (_React$Component) {
                 props.addonAfter
             ) : null;
             var className = classNames(props.prefixCls + '-wrapper', _defineProperty({}, wrapperClassName, addonBefore || addonAfter));
-            var groupClassName = classNames(props.prefixCls + '-group-wrapper', (_classNames3 = {}, _defineProperty(_classNames3, props.prefixCls + '-group-wrapper-sm', props.size === 'small'), _defineProperty(_classNames3, props.prefixCls + '-group-wrapper-lg', props.size === 'large'), _classNames3));
+            var groupClassName = classNames(props.prefixCls + '-group-wrapper', (_classNames3 = {}, _defineProperty(_classNames3, props.prefixCls + '-group-wrapper-sm', props.size === 'small'), _defineProperty(_classNames3, props.prefixCls + '-group-wrapper-lg', props.size === 'large'), _defineProperty(_classNames3, props.prefixCls + '-group-wrapper-' + props.type, props.type), _classNames3));
             // Need another wrapper for changing display:table to display:inline-block
             // and put style prop in wrapper
             return React.createElement(
@@ -126,7 +127,7 @@ var Input = function (_React$Component) {
                 { className: props.prefixCls + '-suffix' },
                 props.suffix
             ) : null;
-            var affixWrapperCls = classNames(props.className, props.prefixCls + '-affix-wrapper', (_classNames4 = {}, _defineProperty(_classNames4, props.prefixCls + '-affix-wrapper-sm', props.size === 'small'), _defineProperty(_classNames4, props.prefixCls + '-affix-wrapper-lg', props.size === 'large'), _classNames4));
+            var affixWrapperCls = classNames(props.className, props.prefixCls + '-affix-wrapper', (_classNames4 = {}, _defineProperty(_classNames4, props.prefixCls + '-affix-wrapper-sm', props.size === 'small'), _defineProperty(_classNames4, props.prefixCls + '-affix-wrapper-lg', props.size === 'large'), _defineProperty(_classNames4, props.prefixCls + '-affix-wrapper-' + props.type, props.type), _classNames4));
             return React.createElement(
                 'span',
                 { className: affixWrapperCls, style: props.style },

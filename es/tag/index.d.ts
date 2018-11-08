@@ -4,6 +4,8 @@ export { CheckableTagProps } from './CheckableTag';
 export interface TagProps extends React.HTMLAttributes<HTMLDivElement> {
     prefixCls?: string;
     className?: string;
+    type?: string;
+    size?: string;
     color?: string;
     /** 标签是否可以关闭 */
     closable?: boolean;
@@ -25,6 +27,7 @@ declare class Tag extends React.Component<TagProps, TagState> {
     static defaultProps: {
         prefixCls: string;
         closable: boolean;
+        size: string;
     };
     static getDerivedStateFromProps(nextProps: TagProps, state: TagState): Partial<TagState> | null;
     state: {

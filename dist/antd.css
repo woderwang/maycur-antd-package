@@ -2353,9 +2353,12 @@ mark {
 /* stylelint-disable no-duplicate-selectors */
 /* stylelint-disable */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
-/* gray */
-/* blue */
-/* red */
+/* basic */
+/* input */
+/* table */
+/* btn */
+/* select */
+/* tag */
 .ant-select-auto-complete {
   font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
@@ -2442,9 +2445,12 @@ mark {
 /* stylelint-disable no-duplicate-selectors */
 /* stylelint-disable */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
-/* gray */
-/* blue */
-/* red */
+/* basic */
+/* input */
+/* table */
+/* btn */
+/* select */
+/* tag */
 .ant-select {
   font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
@@ -2509,6 +2515,60 @@ mark {
   transition: transform .3s;
   transition: transform .3s, -webkit-transform .3s;
 }
+.ant-select-normal .ant-select-selection {
+  border: 1px solid #d9d9d9;
+}
+.ant-select-focused .ant-select-normal .ant-select-selection,
+.ant-select-normal .ant-select-selection:focus,
+.ant-select-normal .ant-select-selection:active {
+  border-color: #40a9ff;
+  outline: 0;
+  border-right-width: 1px !important;
+  -webkit-box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+          box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+.ant-select-focused .ant-select-normal .ant-select-selection svg,
+.ant-select-normal .ant-select-selection:focus svg,
+.ant-select-normal .ant-select-selection:active svg {
+  color: #3296fa;
+}
+.ant-select-mk-normal .ant-select-selection {
+  color: #3296fa;
+  border: 1px solid #d9d9d9;
+}
+.ant-select-focused .ant-select-mk-normal .ant-select-selection,
+.ant-select-mk-normal .ant-select-selection:focus,
+.ant-select-mk-normal .ant-select-selection:active {
+  border-color: #40a9ff;
+  outline: 0;
+  border-right-width: 1px !important;
+  -webkit-box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+          box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+.ant-select-focused .ant-select-mk-normal .ant-select-selection svg,
+.ant-select-mk-normal .ant-select-selection:focus svg,
+.ant-select-mk-normal .ant-select-selection:active svg {
+  color: #3296fa;
+}
+.ant-select-gray .ant-select-selection {
+  border-color: #f7f7f7 !important;
+  border: 1px solid #f7f7f7;
+  background: #f7f7f7;
+  color: #333;
+}
+.ant-select-gray .ant-select-selection svg {
+  color: #9b9b9b;
+}
+.ant-select-focused .ant-select-gray .ant-select-selection,
+.ant-select-gray .ant-select-selection:hover,
+.ant-select-gray .ant-select-selection:focus,
+.ant-select-gray .ant-select-selection:active {
+  border-color: #40a9ff;
+  outline: 0;
+  border-right-width: 1px !important;
+  border-color: #f7f7f7;
+  color: #3296fa;
+}
 .ant-select-selection {
   outline: none;
   -webkit-user-select: none;
@@ -2537,6 +2597,11 @@ mark {
   border-color: #40a9ff;
   outline: 0;
   border-right-width: 1px !important;
+}
+.ant-select-focused .ant-select-selection svg,
+.ant-select-selection:focus svg,
+.ant-select-selection:active svg {
+  color: #3296fa;
 }
 .ant-select-selection__clear {
   display: inline-block;
@@ -2595,13 +2660,32 @@ mark {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
+.ant-select-disabled .ant-select-selection:hover svg,
+.ant-select-disabled .ant-select-selection:focus svg,
+.ant-select-disabled .ant-select-selection:active svg {
+  color: rgba(0, 0, 0, 0.25) !important;
+}
 .ant-select-disabled .ant-select-selection__clear {
   display: none;
   visibility: hidden;
   pointer-events: none;
 }
-.ant-select-disabled .ant-select-arrow {
-  display: none;
+.ant-select-disabled.ant-select-normal .ant-select-selection {
+  color: rgba(0, 0, 0, 0.25);
+  background: #f5f5f5;
+  border-style: solid;
+  cursor: not-allowed;
+}
+.ant-select-disabled.ant-select-mk-normal .ant-select-selection {
+  color: #3296fa;
+  background: #f7f7f7;
+  opacity: 0.5;
+  border-style: solid;
+  cursor: not-allowed;
+}
+.ant-select-disabled.ant-select-gray .ant-select-selection {
+  color: #bcbcbc;
+  cursor: not-allowed;
 }
 .ant-select-disabled .ant-select-selection--multiple .ant-select-selection__choice {
   background: #f5f5f5;
@@ -3042,9 +3126,12 @@ mark {
 /* stylelint-disable no-duplicate-selectors */
 /* stylelint-disable */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
-/* gray */
-/* blue */
-/* red */
+/* basic */
+/* input */
+/* table */
+/* btn */
+/* select */
+/* tag */
 .ant-input {
   font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-variant: tabular-nums;
@@ -3056,7 +3143,7 @@ mark {
   list-style: none;
   position: relative;
   display: inline-block;
-  padding: 4px 11px;
+  padding: 4px 0;
   width: 100%;
   height: 32px;
   font-size: 14px;
@@ -3124,12 +3211,12 @@ textarea.ant-input {
   min-height: 32px;
 }
 .ant-input-lg {
-  padding: 6px 11px;
+  padding: 6px 0;
   height: 40px;
   font-size: 16px;
 }
 .ant-input-sm {
-  padding: 1px 7px;
+  padding: 1px 0;
   height: 24px;
 }
 .ant-input-group {
@@ -3262,13 +3349,13 @@ textarea.ant-input {
 }
 .ant-input-group-lg .ant-input,
 .ant-input-group-lg > .ant-input-group-addon {
-  padding: 6px 11px;
+  padding: 6px 0;
   height: 40px;
   font-size: 16px;
 }
 .ant-input-group-sm .ant-input,
 .ant-input-group-sm > .ant-input-group-addon {
-  padding: 1px 7px;
+  padding: 1px 0;
   height: 24px;
 }
 .ant-input-group-lg .ant-select-selection--single {
@@ -3456,11 +3543,14 @@ textarea.ant-input {
   display: inline-block;
   width: 100%;
 }
-.ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled) {
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-gray):hover i:not(.ant-input-search-btn):not(.ant-select-remove-icon) svg {
+  color: #3296fa;
+}
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-gray):hover .ant-input:not(.ant-input-disabled) {
   border-color: #3296fa;
   border-right-width: 1px !important;
 }
-.ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled) i:not(.ant-input-search-btn):not(.ant-select-remove-icon) svg {
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-gray):hover .ant-input:not(.ant-input-disabled) i:not(.ant-input-search-btn):not(.ant-select-remove-icon) svg {
   color: #3296fa;
 }
 .ant-input-affix-wrapper .ant-input {
@@ -3492,6 +3582,33 @@ textarea.ant-input {
 .ant-input-affix-wrapper .ant-input:not(:last-child) {
   padding-right: 30px;
 }
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-gray):hover .ant-input:not(.ant-input-disabled) {
+  border-color: #3296fa;
+  border-right-width: 1px !important;
+}
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-gray):hover .ant-input:not(.ant-input-disabled) i:not(.ant-input-search-btn):not(.ant-select-remove-icon) svg {
+  color: #3296fa;
+}
+.ant-input-affix-wrapper-normal .ant-input {
+  border: 1px solid #d9d9d9;
+  padding: 4px 11px;
+}
+.ant-input-affix-wrapper-gray svg {
+  color: #555;
+}
+.ant-input-affix-wrapper-gray .ant-input {
+  border: 1px solid #f7f7f7;
+  padding: 4px 11px;
+  background: #f7f7f7;
+}
+.ant-input-affix-wrapper-gray .ant-input:focus,
+.ant-input-affix-wrapper-gray .ant-input:active {
+  background: #eee;
+}
+.ant-input-affix-wrapper-gray .ant-input:focus + .ant-input-suffix svg,
+.ant-input-affix-wrapper-gray .ant-input:active + .ant-input-suffix svg {
+  color: #555;
+}
 .ant-input-affix-wrapper .ant-input {
   min-height: 100%;
 }
@@ -3517,20 +3634,16 @@ textarea.ant-input {
 .ant-input-search.ant-input-search-enter-button > .ant-input-suffix {
   right: 0;
 }
-.ant-input-search:hover {
-  border-color: #3296fa;
-  border-right-width: 1px !important;
-}
-.ant-input-search:hover i:not(.ant-input-search-btn):not(.ant-select-remove-icon) svg {
-  color: #3296fa;
-}
 /* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
 /* stylelint-disable no-duplicate-selectors */
 /* stylelint-disable */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
-/* gray */
-/* blue */
-/* red */
+/* basic */
+/* input */
+/* table */
+/* btn */
+/* select */
+/* tag */
 .ant-btn {
   line-height: 1.5;
   display: inline-block;
@@ -4289,10 +4402,14 @@ textarea.ant-input {
 }
 .ant-btn-text:focus {
   color: #2074D4;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .ant-btn-text:active,
 .ant-btn-text.active {
   color: #2074D4;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .ant-btn-text.disabled,
 .ant-btn-text[disabled],
@@ -4321,10 +4438,14 @@ textarea.ant-input {
 }
 .ant-btn-text-danger:focus {
   color: #D0021B;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .ant-btn-text-danger:active,
 .ant-btn-text-danger.active {
   color: #D0021B;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .ant-btn-text-danger.disabled,
 .ant-btn-text-danger[disabled],
@@ -6975,9 +7096,12 @@ span.ant-radio + * {
 /* stylelint-disable no-duplicate-selectors */
 /* stylelint-disable */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
-/* gray */
-/* blue */
-/* red */
+/* basic */
+/* input */
+/* table */
+/* btn */
+/* select */
+/* tag */
 .ant-cascader {
   font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
@@ -11418,9 +11542,12 @@ span.ant-radio + * {
 /* stylelint-disable no-duplicate-selectors */
 /* stylelint-disable */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
-/* gray */
-/* blue */
-/* red */
+/* basic */
+/* input */
+/* table */
+/* btn */
+/* select */
+/* tag */
 .ant-calendar-picker-container {
   font-size: 14px;
   font-variant: tabular-nums;
@@ -12125,7 +12252,7 @@ span.ant-radio + * {
 .ant-calendar-range .ant-calendar-time-picker-input {
   position: relative;
   display: inline-block;
-  padding: 4px 11px;
+  padding: 4px 0;
   width: 100%;
   height: 32px;
   font-size: 14px;
@@ -12212,13 +12339,13 @@ textarea.ant-calendar-range .ant-calendar-time-picker-input {
 }
 .ant-calendar-range .ant-calendar-input-lg,
 .ant-calendar-range .ant-calendar-time-picker-input-lg {
-  padding: 6px 11px;
+  padding: 6px 0;
   height: 40px;
   font-size: 16px;
 }
 .ant-calendar-range .ant-calendar-input-sm,
 .ant-calendar-range .ant-calendar-time-picker-input-sm {
-  padding: 1px 7px;
+  padding: 1px 0;
   height: 24px;
 }
 .ant-calendar-range .ant-calendar-input:focus,
@@ -12910,9 +13037,12 @@ li.ant-calendar-time-picker-select-option-disabled:hover {
 /* stylelint-disable no-duplicate-selectors */
 /* stylelint-disable */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
-/* gray */
-/* blue */
-/* red */
+/* basic */
+/* input */
+/* table */
+/* btn */
+/* select */
+/* tag */
 .ant-time-picker-panel {
   font-size: 14px;
   font-variant: tabular-nums;
@@ -13127,7 +13257,7 @@ li.ant-time-picker-panel-select-option-disabled:hover {
 .ant-time-picker-input {
   position: relative;
   display: inline-block;
-  padding: 4px 11px;
+  padding: 4px 0;
   width: 100%;
   height: 32px;
   font-size: 14px;
@@ -13195,12 +13325,12 @@ textarea.ant-time-picker-input {
   min-height: 32px;
 }
 .ant-time-picker-input-lg {
-  padding: 6px 11px;
+  padding: 6px 0;
   height: 40px;
   font-size: 16px;
 }
 .ant-time-picker-input-sm {
-  padding: 1px 7px;
+  padding: 1px 0;
   height: 24px;
 }
 .ant-time-picker-input[disabled] {
@@ -13242,12 +13372,12 @@ textarea.ant-time-picker-input {
   line-height: 1;
 }
 .ant-time-picker-large .ant-time-picker-input {
-  padding: 6px 11px;
+  padding: 6px 0;
   height: 40px;
   font-size: 16px;
 }
 .ant-time-picker-small .ant-time-picker-input {
-  padding: 1px 7px;
+  padding: 1px 0;
   height: 24px;
 }
 .ant-time-picker-small .ant-time-picker-icon {
@@ -13263,6 +13393,12 @@ textarea.ant-time-picker-input {
 /* stylelint-disable no-duplicate-selectors */
 /* stylelint-disable */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
+/* basic */
+/* input */
+/* table */
+/* btn */
+/* select */
+/* tag */
 .ant-tag {
   font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
@@ -13296,6 +13432,58 @@ textarea.ant-time-picker-input {
 .ant-tag a,
 .ant-tag a:hover {
   color: rgba(0, 0, 0, 0.65);
+}
+.ant-tag-small {
+  font-size: 10px;
+  -webkit-transform: scale(0.8);
+  height: 16px;
+  line-height: 16px;
+  padding: 0 6px;
+}
+.ant-tag-normal {
+  color: #fff;
+  border: none;
+  background: #3296fa;
+  border-radius: 1px;
+  padding: 0 8px;
+  height: 22px;
+  line-height: 22px;
+}
+.ant-tag-success {
+  color: #fff;
+  border: none;
+  background: #00B600;
+  border-radius: 1px;
+  padding: 0 8px;
+  height: 22px;
+  line-height: 22px;
+}
+.ant-tag-info {
+  color: #fff;
+  border: none;
+  background: #00B600;
+  border-radius: 1px;
+  padding: 0 8px;
+  height: 22px;
+  line-height: 22px;
+}
+.ant-tag-warning {
+  color: #fff;
+  border: none;
+  background: #EFBC23;
+  border-radius: 1px;
+  padding: 0 8px;
+  height: 22px;
+  line-height: 22px;
+}
+.ant-tag-danger {
+  color: #fff;
+  border: none;
+  background: #00B600;
+  border-radius: 1px;
+  padding: 0 8px;
+  height: 22px;
+  line-height: 22px;
 }
 .ant-tag > a:first-child:last-child {
   display: inline-block;
@@ -14052,9 +14240,12 @@ textarea.ant-time-picker-input {
 /* stylelint-disable no-duplicate-selectors */
 /* stylelint-disable */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
-/* gray */
-/* blue */
-/* red */
+/* basic */
+/* input */
+/* table */
+/* btn */
+/* select */
+/* tag */
 .ant-form {
   font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
@@ -14817,9 +15008,12 @@ form .ant-input-group-wrapper {
 /* stylelint-disable no-duplicate-selectors */
 /* stylelint-disable */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
-/* gray */
-/* blue */
-/* red */
+/* basic */
+/* input */
+/* table */
+/* btn */
+/* select */
+/* tag */
 .ant-input-number {
   font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-variant: tabular-nums;
@@ -14828,7 +15022,7 @@ form .ant-input-group-wrapper {
           box-sizing: border-box;
   list-style: none;
   position: relative;
-  padding: 4px 11px;
+  padding: 4px 0;
   width: 100%;
   height: 32px;
   font-size: 14px;
@@ -14902,12 +15096,12 @@ textarea.ant-input-number {
   min-height: 32px;
 }
 .ant-input-number-lg {
-  padding: 6px 11px;
+  padding: 6px 0;
   height: 40px;
   font-size: 16px;
 }
 .ant-input-number-sm {
-  padding: 1px 7px;
+  padding: 1px 0;
   height: 24px;
 }
 .ant-input-number-handler {
@@ -15766,9 +15960,12 @@ textarea.ant-input-number {
 /* stylelint-disable no-duplicate-selectors */
 /* stylelint-disable */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
-/* gray */
-/* blue */
-/* red */
+/* basic */
+/* input */
+/* table */
+/* btn */
+/* select */
+/* tag */
 .ant-pagination {
   font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
@@ -16012,7 +16209,7 @@ textarea.ant-input-number {
 .ant-pagination-options-quick-jumper input {
   position: relative;
   display: inline-block;
-  padding: 4px 11px;
+  padding: 4px 0;
   width: 100%;
   height: 32px;
   font-size: 14px;
@@ -16082,12 +16279,12 @@ textarea.ant-pagination-options-quick-jumper input {
   min-height: 32px;
 }
 .ant-pagination-options-quick-jumper input-lg {
-  padding: 6px 11px;
+  padding: 6px 0;
   height: 40px;
   font-size: 16px;
 }
 .ant-pagination-options-quick-jumper input-sm {
-  padding: 1px 7px;
+  padding: 1px 0;
   height: 24px;
 }
 .ant-pagination-simple .ant-pagination-prev,
@@ -16174,7 +16371,7 @@ textarea.ant-pagination-options-quick-jumper input {
   line-height: 24px;
 }
 .ant-pagination.mini .ant-pagination-options-quick-jumper input {
-  padding: 1px 7px;
+  padding: 1px 0;
   height: 24px;
   width: 44px;
 }
@@ -16197,9 +16394,12 @@ textarea.ant-pagination-options-quick-jumper input {
 /* stylelint-disable no-duplicate-selectors */
 /* stylelint-disable */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
-/* gray */
-/* blue */
-/* red */
+/* basic */
+/* input */
+/* table */
+/* btn */
+/* select */
+/* tag */
 .ant-mention-wrapper {
   font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
@@ -16219,7 +16419,7 @@ textarea.ant-pagination-options-quick-jumper input {
 .ant-mention-wrapper .ant-mention-editor {
   position: relative;
   display: inline-block;
-  padding: 4px 11px;
+  padding: 4px 0;
   width: 100%;
   height: 32px;
   font-size: 14px;
@@ -16291,12 +16491,12 @@ textarea.ant-mention-wrapper .ant-mention-editor {
   min-height: 32px;
 }
 .ant-mention-wrapper .ant-mention-editor-lg {
-  padding: 6px 11px;
+  padding: 6px 0;
   height: 40px;
   font-size: 16px;
 }
 .ant-mention-wrapper .ant-mention-editor-sm {
-  padding: 1px 7px;
+  padding: 1px 0;
   height: 24px;
 }
 .ant-mention-wrapper .ant-mention-editor-wrapper {
@@ -19187,9 +19387,12 @@ a.ant-notification-notice-close:focus {
 /* stylelint-disable no-duplicate-selectors */
 /* stylelint-disable */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
-/* gray */
-/* blue */
-/* red */
+/* basic */
+/* input */
+/* table */
+/* btn */
+/* select */
+/* tag */
 .ant-table-wrapper {
   zoom: 1;
 }

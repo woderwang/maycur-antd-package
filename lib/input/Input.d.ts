@@ -5,6 +5,7 @@ import Search from './Search';
 import TextArea from './TextArea';
 import { Omit } from '../_util/type';
 export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size' | 'prefix'> {
+    type?: string;
     prefixCls?: string;
     size?: 'large' | 'default' | 'small';
     onPressEnter?: React.KeyboardEventHandler<HTMLInputElement>;

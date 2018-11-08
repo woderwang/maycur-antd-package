@@ -109,13 +109,15 @@ var Tag = function (_React$Component) {
                 prefixCls = _a.prefixCls,
                 closable = _a.closable,
                 color = _a.color,
+                type = _a.type,
+                size = _a.size,
                 className = _a.className,
                 children = _a.children,
                 style = _a.style,
-                otherProps = __rest(_a, ["prefixCls", "closable", "color", "className", "children", "style"]);
+                otherProps = __rest(_a, ["prefixCls", "closable", "color", "type", "size", "className", "children", "style"]);
             var closeIcon = closable ? React.createElement(Icon, { type: 'close', onClick: this.handleIconClick }) : '';
             var isPresetColor = this.isPresetColor(color);
-            var classString = classNames(prefixCls, (_classNames = {}, _defineProperty(_classNames, prefixCls + '-' + color, isPresetColor), _defineProperty(_classNames, prefixCls + '-has-color', color && !isPresetColor), _defineProperty(_classNames, prefixCls + '-close', this.state.closing), _classNames), className);
+            var classString = classNames(prefixCls, (_classNames = {}, _defineProperty(_classNames, prefixCls + '-' + color, isPresetColor), _defineProperty(_classNames, prefixCls + '-has-color', color && !isPresetColor), _defineProperty(_classNames, prefixCls + '-close', this.state.closing), _defineProperty(_classNames, prefixCls + '-' + type, type), _defineProperty(_classNames, prefixCls + '-' + size, size), _classNames), className);
             // fix https://fb.me/react-unknown-prop
             var divProps = omit(otherProps, ['onClose', 'afterClose', 'visible']);
             var tagStyle = _extends({ backgroundColor: color && !isPresetColor ? color : null }, style);
@@ -158,7 +160,8 @@ var Tag = function (_React$Component) {
 Tag.CheckableTag = CheckableTag;
 Tag.defaultProps = {
     prefixCls: 'ant-tag',
-    closable: false
+    closable: false,
+    size: 'large'
 };
 polyfill(Tag);
 export default Tag;

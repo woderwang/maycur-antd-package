@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 export interface AbstractSelectProps {
+    type?: string;
     prefixCls?: string;
     className?: string;
     size?: 'default' | 'large' | 'small';
@@ -83,6 +84,7 @@ export default class Select extends React.Component<SelectProps, {}> {
         choiceTransitionName: string;
     };
     static propTypes: {
+        type: PropTypes.Requireable<string>;
         prefixCls: PropTypes.Requireable<string>;
         className: PropTypes.Requireable<string>;
         size: PropTypes.Requireable<string>;

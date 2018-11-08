@@ -2,9 +2,12 @@
 /* stylelint-disable no-duplicate-selectors */
 /* stylelint-disable */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
-/* gray */
-/* blue */
-/* red */
+/* basic */
+/* input */
+/* table */
+/* btn */
+/* select */
+/* tag */
 .ant-cascader {
   font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;

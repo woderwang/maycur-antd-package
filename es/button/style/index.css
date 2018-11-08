@@ -2,9 +2,12 @@
 /* stylelint-disable no-duplicate-selectors */
 /* stylelint-disable */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
-/* gray */
-/* blue */
-/* red */
+/* basic */
+/* input */
+/* table */
+/* btn */
+/* select */
+/* tag */
 .ant-btn {
   line-height: 1.5;
   display: inline-block;
@@ -763,10 +766,14 @@
 }
 .ant-btn-text:focus {
   color: #2074D4;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .ant-btn-text:active,
 .ant-btn-text.active {
   color: #2074D4;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .ant-btn-text.disabled,
 .ant-btn-text[disabled],
@@ -795,10 +802,14 @@
 }
 .ant-btn-text-danger:focus {
   color: #D0021B;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .ant-btn-text-danger:active,
 .ant-btn-text-danger.active {
   color: #D0021B;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .ant-btn-text-danger.disabled,
 .ant-btn-text-danger[disabled],

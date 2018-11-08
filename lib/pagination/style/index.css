@@ -2,9 +2,12 @@
 /* stylelint-disable no-duplicate-selectors */
 /* stylelint-disable */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
-/* gray */
-/* blue */
-/* red */
+/* basic */
+/* input */
+/* table */
+/* btn */
+/* select */
+/* tag */
 .ant-pagination {
   font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
@@ -248,7 +251,7 @@
 .ant-pagination-options-quick-jumper input {
   position: relative;
   display: inline-block;
-  padding: 4px 11px;
+  padding: 4px 0;
   width: 100%;
   height: 32px;
   font-size: 14px;
@@ -318,12 +321,12 @@ textarea.ant-pagination-options-quick-jumper input {
   min-height: 32px;
 }
 .ant-pagination-options-quick-jumper input-lg {
-  padding: 6px 11px;
+  padding: 6px 0;
   height: 40px;
   font-size: 16px;
 }
 .ant-pagination-options-quick-jumper input-sm {
-  padding: 1px 7px;
+  padding: 1px 0;
   height: 24px;
 }
 .ant-pagination-simple .ant-pagination-prev,
@@ -410,7 +413,7 @@ textarea.ant-pagination-options-quick-jumper input {
   line-height: 24px;
 }
 .ant-pagination.mini .ant-pagination-options-quick-jumper input {
-  padding: 1px 7px;
+  padding: 1px 0;
   height: 24px;
   width: 44px;
 }

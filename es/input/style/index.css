@@ -2,9 +2,12 @@
 /* stylelint-disable no-duplicate-selectors */
 /* stylelint-disable */
 /* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
-/* gray */
-/* blue */
-/* red */
+/* basic */
+/* input */
+/* table */
+/* btn */
+/* select */
+/* tag */
 .ant-input {
   font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-variant: tabular-nums;
@@ -16,7 +19,7 @@
   list-style: none;
   position: relative;
   display: inline-block;
-  padding: 4px 11px;
+  padding: 4px 0;
   width: 100%;
   height: 32px;
   font-size: 14px;
@@ -84,12 +87,12 @@ textarea.ant-input {
   min-height: 32px;
 }
 .ant-input-lg {
-  padding: 6px 11px;
+  padding: 6px 0;
   height: 40px;
   font-size: 16px;
 }
 .ant-input-sm {
-  padding: 1px 7px;
+  padding: 1px 0;
   height: 24px;
 }
 .ant-input-group {
@@ -222,13 +225,13 @@ textarea.ant-input {
 }
 .ant-input-group-lg .ant-input,
 .ant-input-group-lg > .ant-input-group-addon {
-  padding: 6px 11px;
+  padding: 6px 0;
   height: 40px;
   font-size: 16px;
 }
 .ant-input-group-sm .ant-input,
 .ant-input-group-sm > .ant-input-group-addon {
-  padding: 1px 7px;
+  padding: 1px 0;
   height: 24px;
 }
 .ant-input-group-lg .ant-select-selection--single {
@@ -416,11 +419,14 @@ textarea.ant-input {
   display: inline-block;
   width: 100%;
 }
-.ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled) {
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-gray):hover i:not(.ant-input-search-btn):not(.ant-select-remove-icon) svg {
+  color: #3296fa;
+}
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-gray):hover .ant-input:not(.ant-input-disabled) {
   border-color: #3296fa;
   border-right-width: 1px !important;
 }
-.ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled) i:not(.ant-input-search-btn):not(.ant-select-remove-icon) svg {
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-gray):hover .ant-input:not(.ant-input-disabled) i:not(.ant-input-search-btn):not(.ant-select-remove-icon) svg {
   color: #3296fa;
 }
 .ant-input-affix-wrapper .ant-input {
@@ -452,6 +458,33 @@ textarea.ant-input {
 .ant-input-affix-wrapper .ant-input:not(:last-child) {
   padding-right: 30px;
 }
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-gray):hover .ant-input:not(.ant-input-disabled) {
+  border-color: #3296fa;
+  border-right-width: 1px !important;
+}
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-gray):hover .ant-input:not(.ant-input-disabled) i:not(.ant-input-search-btn):not(.ant-select-remove-icon) svg {
+  color: #3296fa;
+}
+.ant-input-affix-wrapper-normal .ant-input {
+  border: 1px solid #d9d9d9;
+  padding: 4px 11px;
+}
+.ant-input-affix-wrapper-gray svg {
+  color: #555;
+}
+.ant-input-affix-wrapper-gray .ant-input {
+  border: 1px solid #f7f7f7;
+  padding: 4px 11px;
+  background: #f7f7f7;
+}
+.ant-input-affix-wrapper-gray .ant-input:focus,
+.ant-input-affix-wrapper-gray .ant-input:active {
+  background: #eee;
+}
+.ant-input-affix-wrapper-gray .ant-input:focus + .ant-input-suffix svg,
+.ant-input-affix-wrapper-gray .ant-input:active + .ant-input-suffix svg {
+  color: #555;
+}
 .ant-input-affix-wrapper .ant-input {
   min-height: 100%;
 }
@@ -476,11 +509,4 @@ textarea.ant-input {
 }
 .ant-input-search.ant-input-search-enter-button > .ant-input-suffix {
   right: 0;
-}
-.ant-input-search:hover {
-  border-color: #3296fa;
-  border-right-width: 1px !important;
-}
-.ant-input-search:hover i:not(.ant-input-search-btn):not(.ant-select-remove-icon) svg {
-  color: #3296fa;
 }

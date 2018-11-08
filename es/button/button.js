@@ -184,7 +184,7 @@ var Button = function (_React$Component) {
                     iconNode,
                     kids
                 );
-            } else if (type === 'text') {
+            } else if (type === 'text' || type === 'text-danger') {
                 var htmlType = rest.htmlType,
                     otherProps = __rest(rest, ["htmlType"]);
                 return React.createElement(
