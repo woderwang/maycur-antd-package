@@ -18,7 +18,7 @@ var MiniSelect = function (_React$Component) {
     _createClass(MiniSelect, [{
         key: 'render',
         value: function render() {
-            return React.createElement(Select, _extends({ size: 'small' }, this.props));
+            return React.createElement(Select, _extends({ size: 'small', type: 'normal' }, this.props));
         }
     }]);
 
