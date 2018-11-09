@@ -45,61 +45,43 @@
 .ant-tag-small {
   font-size: 10px;
   -webkit-transform: scale(0.8);
-  height: 16px;
-  line-height: 16px;
+  height: 18px;
+  line-height: 18px;
   padding: 0 6px;
 }
 .ant-tag-mk {
   border: none;
   border-radius: 1px;
-  padding: 0 8px;
-  height: 22px;
-  line-height: 22px;
 }
 .ant-tag-normal {
   color: #fff;
   border: 1px solid #3296fa;
   background: #3296fa;
   border-radius: 1px;
-  padding: 0 8px;
-  height: 20px;
-  line-height: 20px;
 }
 .ant-tag-success {
   color: #fff;
   border: 1px solid #00B600;
   background: #00B600;
   border-radius: 1px;
-  padding: 0 8px;
-  height: 20px;
-  line-height: 20px;
 }
 .ant-tag-info {
   color: #fff;
   border: 1px solid #00B600;
   background: #00B600;
   border-radius: 1px;
-  padding: 0 8px;
-  height: 20px;
-  line-height: 20px;
 }
 .ant-tag-warning {
   color: #fff;
   border: 1px solid #EFBC23;
   background: #EFBC23;
   border-radius: 1px;
-  padding: 0 8px;
-  height: 20px;
-  line-height: 20px;
 }
 .ant-tag-danger {
   color: #fff;
   border: 1px solid #00B600;
   background: #00B600;
   border-radius: 1px;
-  padding: 0 8px;
-  height: 20px;
-  line-height: 20px;
 }
 .ant-tag > a:first-child:last-child {
   display: inline-block;

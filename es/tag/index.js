@@ -136,7 +136,7 @@ var Tag = function (_React$Component) {
                 otherProps = __rest(_a, ["prefixCls", "closable", "color", "type", "size", "ghost", "className", "children", "style"]);
             var closeIcon = closable ? React.createElement(Icon, { type: 'close', onClick: this.handleIconClick }) : '';
             var isPresetColor = this.isPresetColor(color);
-            var classString = classNames(prefixCls, (_classNames = {}, _defineProperty(_classNames, prefixCls + '-' + color, isPresetColor), _defineProperty(_classNames, prefixCls + '-has-color', color && !isPresetColor), _defineProperty(_classNames, prefixCls + '-close', this.state.closing), _defineProperty(_classNames, prefixCls + '-' + type, type), _defineProperty(_classNames, prefixCls + '-' + size, size), _classNames), className);
+            var classString = classNames(prefixCls, (_classNames = {}, _defineProperty(_classNames, prefixCls + '-' + color, isPresetColor), _defineProperty(_classNames, prefixCls + '-has-color', color && !isPresetColor), _defineProperty(_classNames, prefixCls + '-close', this.state.closing), _defineProperty(_classNames, prefixCls + '-' + size, size), _defineProperty(_classNames, prefixCls + '-' + type, type), _classNames), className);
             // fix https://fb.me/react-unknown-prop
             var divProps = omit(otherProps, ['onClose', 'afterClose', 'visible']);
             var tagStyle;
@@ -149,7 +149,7 @@ var Tag = function (_React$Component) {
                     console.log('color', type && type != 'mk' ? this.getTagStyleColor(type) : color ? color : 'rgba(0, 0, 0, 0.65)');
                     console.log('border', type && type != 'mk' ? '1px solid ' + this.getTagStyleColor(type) : color ? '1px solid ' + color : '1px solid #d9d9d9');
                 }
-                tagStyle = _extends({ backgroundColor: '#fff', color: type && type != 'mk' ? this.getTagStyleColor(type) : color ? color : 'rgba(0, 0, 0, 0.65)', border: type && type != 'mk' ? '1px solid ' + this.getTagStyleColor(type) : color ? '1px solid ' + color : '1px solid #d9d9d9' }, style);
+                tagStyle = _extends({ backgroundColor: 'transparent', color: type && type != 'mk' ? this.getTagStyleColor(type) : color ? color : 'rgba(0, 0, 0, 0.65)', border: type && type != 'mk' ? '1px solid ' + this.getTagStyleColor(type) : color ? '1px solid ' + color : '1px solid #d9d9d9' }, style);
             } else {
                 tagStyle = _extends({ backgroundColor: color && !isPresetColor ? color : null }, style);
             }

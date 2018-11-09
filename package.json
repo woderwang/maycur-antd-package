@@ -1,6 +1,6 @@
 {
   "name": "maycur-antd",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "antd maycur version",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
