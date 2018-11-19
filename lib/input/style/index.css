@@ -183,7 +183,7 @@ textarea.ant-input {
 }
 .ant-input-group-addon > i:only-child:after {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 0;
   right: 0;

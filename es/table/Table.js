@@ -607,6 +607,18 @@ var Table = function (_React$Component) {
             };
         }
     }, {
+        key: 'isSameColumn',
+        value: function isSameColumn(a, b) {
+            if (a && b && a.key && a.key === b.key) {
+                return true;
+            }
+            return a === b || shallowEqual(a, b, function (value, other) {
+                if (typeof value === 'function' && typeof other === 'function') {
+                    return value === other || value.toString() === other.toString();
+                }
+            });
+        }
+    }, {
         key: 'toggleSortOrder',
         value: function toggleSortOrder(column) {
             if (!column.sorter) {
@@ -619,7 +631,7 @@ var Table = function (_React$Component) {
 
             var newSortOrder = void 0;
             // 切换另一列时，丢弃 sortOrder 的状态
-            var oldSortOrder = sortColumn === column || shallowEqual(sortColumn, column) ? sortOrder : undefined;
+            var oldSortOrder = this.isSameColumn(sortColumn, column) ? sortOrder : undefined;
             // 切换排序状态，按照降序/升序/不排序的顺序
             if (!oldSortOrder) {
                 newSortOrder = 'descend';
@@ -724,7 +736,9 @@ var Table = function (_React$Component) {
             var _props2 = this.props,
                 prefixCls = _props2.prefixCls,
                 dropdownPrefixCls = _props2.dropdownPrefixCls;
-            var sortOrder = this.state.sortOrder;
+            var _state2 = this.state,
+                sortOrder = _state2.sortOrder,
+                filters = _state2.filters;
 
             return treeMap(columns, function (column, i) {
                 var _classNames3;
@@ -734,7 +748,7 @@ var Table = function (_React$Component) {
                 var sortButton = void 0;
                 var isSortColumn = _this7.isSortColumn(column);
                 if (column.filters && column.filters.length > 0 || column.filterDropdown) {
-                    var colFilters = _this7.state.filters[key] || [];
+                    var colFilters = key in filters ? filters[key] : [];
                     filterDropdown = React.createElement(FilterDropdown, { locale: locale, column: column, selectedKeys: colFilters, confirmFilter: _this7.handleFilter, prefixCls: prefixCls + '-filter', dropdownPrefixCls: dropdownPrefixCls || 'ant-dropdown', getPopupContainer: _this7.getPopupContainer, key: 'filter-dropdown' });
                 }
                 if (column.sorter) {
@@ -760,9 +774,9 @@ var Table = function (_React$Component) {
     }, {
         key: 'renderColumnTitle',
         value: function renderColumnTitle(title) {
-            var _state2 = this.state,
-                filters = _state2.filters,
-                sortOrder = _state2.sortOrder;
+            var _state3 = this.state,
+                filters = _state3.filters,
+                sortOrder = _state3.sortOrder;
             // https://github.com/ant-design/ant-design/issues/11246#issuecomment-405009167
 
             if (title instanceof Function) {

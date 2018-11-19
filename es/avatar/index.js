@@ -20,11 +20,15 @@ import classNames from 'classnames';
 var Avatar = function (_React$Component) {
     _inherits(Avatar, _React$Component);
 
-    function Avatar(props) {
+    function Avatar() {
         _classCallCheck(this, Avatar);
 
-        var _this = _possibleConstructorReturn(this, (Avatar.__proto__ || Object.getPrototypeOf(Avatar)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (Avatar.__proto__ || Object.getPrototypeOf(Avatar)).apply(this, arguments));
 
+        _this.state = {
+            scale: 1,
+            isImgExist: true
+        };
         _this.setScale = function () {
             var childrenNode = _this.avatarChildren;
             if (childrenNode) {
@@ -50,10 +54,6 @@ var Avatar = function (_React$Component) {
             if (errorFlag !== false) {
                 _this.setState({ isImgExist: false });
             }
-        };
-        _this.state = {
-            scale: 1,
-            isImgExist: true
         };
         return _this;
     }

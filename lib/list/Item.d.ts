@@ -7,7 +7,7 @@ export interface ListItemProps {
     prefixCls?: string;
     style?: React.CSSProperties;
     extra?: React.ReactNode;
-    actions?: Array<React.ReactNode>;
+    actions?: React.ReactNode[];
     grid?: ListGridType;
 }
 export interface ListItemMetaProps {
@@ -34,5 +34,6 @@ export default class Item extends React.Component<ListItemProps, any> {
     static contextTypes: {
         grid: PropTypes.Requireable<any>;
     };
+    context: any;
     render(): JSX.Element;
 }

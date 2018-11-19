@@ -885,7 +885,7 @@ mark {
 }
 [ant-click-animating-without-extra-node]:after,
 .ant-click-animating-node {
-  content: '';
+  content: "";
   position: absolute;
   top: -1px;
   left: -1px;

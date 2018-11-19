@@ -61,7 +61,7 @@
   max-width: 4px;
 }
 .ant-notification-notice-message-single-line-auto-margin:before {
-  content: '';
+  content: "";
   display: block;
 }
 .ant-notification-notice-description {

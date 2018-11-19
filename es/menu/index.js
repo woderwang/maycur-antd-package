@@ -22,12 +22,26 @@ var Menu = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (Menu.__proto__ || Object.getPrototypeOf(Menu)).call(this, props));
 
         _this.inlineOpenKeys = [];
+        // Restore vertical mode when menu is collapsed responsively when mounted
+        // https://github.com/ant-design/ant-design/issues/13104
+        // TODO: not a perfect solution, looking a new way to avoid setting switchingModeFromInline in this situation
+        _this.handleMouseEnter = function (e) {
+            _this.restoreModeVerticalFromInline();
+            var onMouseEnter = _this.props.onMouseEnter;
+
+            if (onMouseEnter) {
+                onMouseEnter(e);
+            }
+        };
         _this.handleTransitionEnd = function (e) {
             // when inlineCollapsed menu width animation finished
             // https://github.com/ant-design/ant-design/issues/12864
-            if (e.propertyName === 'width' && e.target === e.currentTarget && _this.switchingModeFromInline) {
-                _this.switchingModeFromInline = false;
-                _this.setState({});
+            var widthCollapsed = e.propertyName === 'width' && e.target === e.currentTarget;
+            // Fix for <Menu style={{ width: '100%' }} />, the width transition won't trigger when menu is collapsed
+            // https://github.com/ant-design/ant-design-pro/issues/2783
+            var iconScaled = e.propertyName === 'font-size' && e.target.className.indexOf('anticon') >= 0;
+            if (widthCollapsed || iconScaled) {
+                _this.restoreModeVerticalFromInline();
             }
         };
         _this.handleClick = function (e) {
@@ -86,6 +100,14 @@ var Menu = function (_React$Component) {
             if (!nextProps.inlineCollapsed && this.props.inlineCollapsed || !nextContext.siderCollapsed && this.context.siderCollapsed) {
                 this.setState({ openKeys: this.inlineOpenKeys });
                 this.inlineOpenKeys = [];
+            }
+        }
+    }, {
+        key: 'restoreModeVerticalFromInline',
+        value: function restoreModeVerticalFromInline() {
+            if (this.switchingModeFromInline) {
+                this.switchingModeFromInline = false;
+                this.setState({});
             }
         }
     }, {
@@ -179,7 +201,7 @@ var Menu = function (_React$Component) {
             if (this.getInlineCollapsed() && (collapsedWidth === 0 || collapsedWidth === '0' || collapsedWidth === '0px')) {
                 return null;
             }
-            return React.createElement(RcMenu, _extends({}, this.props, menuProps, { onTransitionEnd: this.handleTransitionEnd }));
+            return React.createElement(RcMenu, _extends({}, this.props, menuProps, { onTransitionEnd: this.handleTransitionEnd, onMouseEnter: this.handleMouseEnter }));
         }
     }]);
 

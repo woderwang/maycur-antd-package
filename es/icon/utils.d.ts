@@ -9,3 +9,4 @@ export declare const svgBaseProps: {
 export declare function getThemeFromTypeName(type: string): ThemeType | null;
 export declare function removeTypeTheme(type: string): string;
 export declare function withThemeSuffix(type: string, theme: ThemeType): string;
+export declare function alias(type: string): string;

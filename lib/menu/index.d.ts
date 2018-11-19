@@ -43,6 +43,7 @@ export interface MenuProps {
     subMenuOpenDelay?: number;
     getPopupContainer?: (triggerNode: Element) => HTMLElement;
     focusable?: boolean;
+    onMouseEnter?: (e: MouseEvent) => void;
 }
 export interface MenuState {
     openKeys: string[];
@@ -61,6 +62,7 @@ export default class Menu extends React.Component<MenuProps, MenuState> {
         siderCollapsed: PropTypes.Requireable<boolean>;
         collapsedWidth: PropTypes.Requireable<string | number>;
     };
+    context: any;
     switchingModeFromInline: boolean;
     inlineOpenKeys: string[];
     constructor(props: MenuProps);
@@ -69,6 +71,8 @@ export default class Menu extends React.Component<MenuProps, MenuState> {
         antdMenuTheme: "light" | "dark" | undefined;
     };
     componentWillReceiveProps(nextProps: MenuProps, nextContext: SiderContext): void;
+    restoreModeVerticalFromInline(): void;
+    handleMouseEnter: (e: MouseEvent) => void;
     handleTransitionEnd: (e: TransitionEvent) => void;
     handleClick: (e: ClickParam) => void;
     handleOpenChange: (openKeys: string[]) => void;

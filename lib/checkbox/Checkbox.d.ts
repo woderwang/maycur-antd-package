@@ -30,7 +30,7 @@ export interface CheckboxChangeEvent {
     preventDefault: () => void;
     nativeEvent: MouseEvent;
 }
-export default class Checkbox extends React.Component<CheckboxProps, {}> {
+export default class Checkbox extends React.Component<CheckboxProps, {}, {}> {
     static Group: typeof CheckboxGroup;
     static defaultProps: {
         prefixCls: string;
@@ -39,6 +39,7 @@ export default class Checkbox extends React.Component<CheckboxProps, {}> {
     static contextTypes: {
         checkboxGroup: PropTypes.Requireable<any>;
     };
+    context: any;
     private rcCheckbox;
     shouldComponentUpdate(nextProps: CheckboxProps, nextState: {}, nextContext: CheckboxGroupContext): boolean;
     focus(): void;

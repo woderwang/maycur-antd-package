@@ -6,7 +6,6 @@ import _inherits from 'babel-runtime/helpers/inherits';
 import * as React from 'react';
 import * as PropTypes from 'prop-types';
 import Radio from './radio';
-import Wave from '../_util/wave';
 
 var RadioButton = function (_React$Component) {
     _inherits(RadioButton, _React$Component);
@@ -26,11 +25,7 @@ var RadioButton = function (_React$Component) {
                 radioProps.checked = this.props.value === this.context.radioGroup.value;
                 radioProps.disabled = this.props.disabled || this.context.radioGroup.disabled;
             }
-            return React.createElement(
-                Wave,
-                null,
-                React.createElement(Radio, radioProps)
-            );
+            return React.createElement(Radio, radioProps);
         }
     }]);
 

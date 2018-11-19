@@ -95,6 +95,14 @@ var Search = function (_React$Component) {
             delete others.onSearch;
             var buttonOrIcon = this.getButtonOrIcon();
             var searchSuffix = suffix ? [suffix, buttonOrIcon] : buttonOrIcon;
+            if (Array.isArray(searchSuffix)) {
+                searchSuffix = searchSuffix.map(function (item, index) {
+                    if (!React.isValidElement(item) || item.key) {
+                        return item;
+                    }
+                    return React.cloneElement(item, { key: index });
+                });
+            }
             var inputClassName = classNames(prefixCls, className, (_classNames = {}, _defineProperty(_classNames, prefixCls + '-enter-button', !!enterButton), _defineProperty(_classNames, prefixCls + '-' + size, !!size), _classNames));
             return React.createElement(Input, _extends({ onPressEnter: this.onSearch }, others, { size: size, className: inputClassName, prefixCls: inputPrefixCls, suffix: searchSuffix, ref: this.saveInput }));
         }

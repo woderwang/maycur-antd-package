@@ -137,7 +137,7 @@
   text-align: center;
 }
 .ant-modal-centered:before {
-  content: '';
+  content: "";
   display: inline-block;
   height: 100%;
   vertical-align: middle;

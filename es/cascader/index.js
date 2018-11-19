@@ -47,9 +47,17 @@ function defaultSortFilteredOption(a, b, inputValue, names) {
     }
     return a.findIndex(callback) - b.findIndex(callback);
 }
-function getFilledFieldNames() {
-    var fieldNames = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+function getFieldNames(props) {
+    var fieldNames = props.fieldNames,
+        filedNames = props.filedNames;
 
+    if ('filedNames' in props) {
+        return filedNames; // For old compatibility
+    }
+    return fieldNames;
+}
+function getFilledFieldNames(props) {
+    var fieldNames = getFieldNames(props) || {};
     var names = {
         children: fieldNames.children || 'children',
         label: fieldNames.label || 'label',
@@ -148,7 +156,7 @@ var Cascader = function (_React$Component) {
             inputValue: '',
             inputFocused: false,
             popupVisible: props.popupVisible,
-            flattenOptions: props.showSearch ? _this.flattenTree(props.options, props.changeOnSelect, props.fieldNames) : undefined
+            flattenOptions: props.showSearch ? _this.flattenTree(props.options, props) : undefined
         };
         return _this;
     }
@@ -164,7 +172,7 @@ var Cascader = function (_React$Component) {
             }
             if (nextProps.showSearch && this.props.options !== nextProps.options) {
                 this.setState({
-                    flattenOptions: this.flattenTree(nextProps.options, nextProps.changeOnSelect, nextProps.fieldNames)
+                    flattenOptions: this.flattenTree(nextProps.options, nextProps)
                 });
             }
         }
@@ -174,10 +182,9 @@ var Cascader = function (_React$Component) {
             var _props = this.props,
                 options = _props.options,
                 _props$displayRender = _props.displayRender,
-                displayRender = _props$displayRender === undefined ? defaultDisplayRender : _props$displayRender,
-                fieldNames = _props.fieldNames;
+                displayRender = _props$displayRender === undefined ? defaultDisplayRender : _props$displayRender;
 
-            var names = getFilledFieldNames(fieldNames);
+            var names = getFilledFieldNames(this.props);
             var value = this.state.value;
             var unwrappedValue = Array.isArray(value[0]) ? value[0] : value;
             var selectedOptions = arrayTreeFilter(options, function (o, level) {
@@ -190,21 +197,21 @@ var Cascader = function (_React$Component) {
         }
     }, {
         key: 'flattenTree',
-        value: function flattenTree(options, changeOnSelect, fieldNames) {
+        value: function flattenTree(options, props) {
             var _this2 = this;
 
-            var ancestor = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : [];
+            var ancestor = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
 
-            var names = getFilledFieldNames(fieldNames);
+            var names = getFilledFieldNames(props);
             var flattenOptions = [];
             var childrenName = names.children;
             options.forEach(function (option) {
                 var path = ancestor.concat(option);
-                if (changeOnSelect || !option[childrenName] || !option[childrenName].length) {
+                if (props.changeOnSelect || !option[childrenName] || !option[childrenName].length) {
                     flattenOptions.push(path);
                 }
                 if (option[childrenName]) {
-                    flattenOptions = flattenOptions.concat(_this2.flattenTree(option[childrenName], changeOnSelect, fieldNames, path));
+                    flattenOptions = flattenOptions.concat(_this2.flattenTree(option[childrenName], props, path));
                 }
             });
             return flattenOptions;
@@ -217,10 +224,9 @@ var Cascader = function (_React$Component) {
 
             var _props2 = this.props,
                 showSearch = _props2.showSearch,
-                notFoundContent = _props2.notFoundContent,
-                fieldNames = _props2.fieldNames;
+                notFoundContent = _props2.notFoundContent;
 
-            var names = getFilledFieldNames(fieldNames);
+            var names = getFilledFieldNames(this.props);
             var _showSearch$filter = showSearch.filter,
                 filter = _showSearch$filter === undefined ? defaultFilterOption : _showSearch$filter,
                 _showSearch$render = showSearch.render,
@@ -294,7 +300,7 @@ var Cascader = function (_React$Component) {
             var pickerCls = classNames(className, prefixCls + '-picker', (_classNames3 = {}, _defineProperty(_classNames3, prefixCls + '-picker-with-value', state.inputValue), _defineProperty(_classNames3, prefixCls + '-picker-disabled', disabled), _defineProperty(_classNames3, prefixCls + '-picker-' + size, !!size), _defineProperty(_classNames3, prefixCls + '-picker-show-search', !!showSearch), _defineProperty(_classNames3, prefixCls + '-picker-focused', inputFocused), _classNames3));
             // Fix bug of https://github.com/facebook/react/pull/5004
             // and https://fb.me/react-unknown-prop
-            var inputProps = omit(otherProps, ['onChange', 'options', 'popupPlacement', 'transitionName', 'displayRender', 'onPopupVisibleChange', 'changeOnSelect', 'expandTrigger', 'popupVisible', 'getPopupContainer', 'loadData', 'popupClassName', 'filterOption', 'renderFilteredOption', 'sortFilteredOption', 'notFoundContent', 'fieldNames']);
+            var inputProps = omit(otherProps, ['onChange', 'options', 'popupPlacement', 'transitionName', 'displayRender', 'onPopupVisibleChange', 'changeOnSelect', 'expandTrigger', 'popupVisible', 'getPopupContainer', 'loadData', 'popupClassName', 'filterOption', 'renderFilteredOption', 'sortFilteredOption', 'notFoundContent', 'fieldNames', 'filedNames']);
             var options = props.options;
             if (state.inputValue) {
                 options = this.generateFilteredOptions(prefixCls);

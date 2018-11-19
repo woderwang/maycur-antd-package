@@ -80,7 +80,7 @@
   left: 0;
   bottom: 0;
   right: 0;
-  content: '';
+  content: "";
 }
 .ant-menu-item-divider {
   height: 1px;
@@ -196,6 +196,7 @@
   position: absolute;
   border-radius: 4px;
   z-index: 1050;
+  background: #fff;
 }
 .ant-menu-submenu-popup .submenu-title-wrapper {
   padding-right: 20px;
@@ -240,7 +241,7 @@
 .ant-menu-submenu-vertical-left > .ant-menu-submenu-title .ant-menu-submenu-arrow:after,
 .ant-menu-submenu-vertical-right > .ant-menu-submenu-title .ant-menu-submenu-arrow:after,
 .ant-menu-submenu-inline > .ant-menu-submenu-title .ant-menu-submenu-arrow:after {
-  content: '';
+  content: "";
   position: absolute;
   vertical-align: baseline;
   background: #fff;

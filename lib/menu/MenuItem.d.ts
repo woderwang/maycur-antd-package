@@ -5,6 +5,7 @@ declare class MenuItem extends React.Component<any, any> {
         inlineCollapsed: PropTypes.Requireable<boolean>;
     };
     static isMenuItem: number;
+    context: any;
     private menuItem;
     onKeyDown: (e: React.MouseEvent<HTMLElement>) => void;
     saveMenuItem: (menuItem: any) => void;

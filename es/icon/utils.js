@@ -40,3 +40,12 @@ export function withThemeSuffix(type, theme) {
     }
     return result;
 }
+// For alias or compatibility
+export function alias(type) {
+    switch (type) {
+        case 'cross':
+            return 'close';
+        default:
+    }
+    return type;
+}

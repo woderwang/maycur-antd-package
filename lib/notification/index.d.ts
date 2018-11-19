@@ -10,7 +10,7 @@ export interface ConfigProps {
 }
 export interface ArgsProps {
     message: React.ReactNode;
-    description: React.ReactNode;
+    description?: React.ReactNode;
     btn?: React.ReactNode;
     key?: string;
     onClose?: () => void;

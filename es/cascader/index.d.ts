@@ -64,7 +64,10 @@ export interface CascaderProps {
     inputPrefixCls?: string;
     getPopupContainer?: (triggerNode?: HTMLElement) => HTMLElement;
     popupVisible?: boolean;
+    /** use this after antd@3.7.0 */
     fieldNames?: FieldNamesType;
+    /** typo props name before antd@3.7.0 */
+    filedNames?: FieldNamesType;
     suffixIcon?: React.ReactNode;
 }
 export interface CascaderState {
@@ -99,7 +102,7 @@ export default class Cascader extends React.Component<CascaderProps, CascaderSta
     setValue: (value: string[], selectedOptions?: CascaderOptionType[]) => void;
     getLabel(): any;
     clearSelection: (e: React.MouseEvent<HTMLElement>) => void;
-    flattenTree(options: CascaderOptionType[], changeOnSelect: boolean | undefined, fieldNames: FieldNamesType | undefined, ancestor?: CascaderOptionType[]): CascaderOptionType[][];
+    flattenTree(options: CascaderOptionType[], props: CascaderProps, ancestor?: CascaderOptionType[]): CascaderOptionType[][];
     generateFilteredOptions(prefixCls: string | undefined): CascaderOptionType[];
     focus(): void;
     blur(): void;

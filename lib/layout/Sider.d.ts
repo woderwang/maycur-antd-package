@@ -46,6 +46,7 @@ declare class Sider extends React.Component<SiderProps, SiderState> {
     static getDerivedStateFromProps(nextProps: SiderProps): {
         collapsed: boolean | undefined;
     } | null;
+    context: any;
     private mql;
     private uniqueId;
     constructor(props: SiderProps);

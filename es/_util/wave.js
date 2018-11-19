@@ -5,7 +5,15 @@ import _inherits from 'babel-runtime/helpers/inherits';
 import * as React from 'react';
 import { findDOMNode } from 'react-dom';
 import TransitionEvents from 'css-animation/es/Event';
+import raf from '../_util/raf';
 var styleForPesudo = void 0;
+// Where el is the DOM element you'd like to test for visibility
+function isHidden(element) {
+    if (process.env.NODE_ENV === 'test') {
+        return false;
+    }
+    return !element || element.offsetParent === null;
+}
 
 var Wave = function (_React$Component) {
     _inherits(Wave, _React$Component);
@@ -15,8 +23,10 @@ var Wave = function (_React$Component) {
 
         var _this = _possibleConstructorReturn(this, (Wave.__proto__ || Object.getPrototypeOf(Wave)).apply(this, arguments));
 
+        _this.animationStart = false;
+        _this.destroy = false;
         _this.onClick = function (node, waveColor) {
-            if (node.className.indexOf('-leave') >= 0) {
+            if (!node || isHidden(node) || node.className.indexOf('-leave') >= 0) {
                 return;
             }
             var insertExtraNode = _this.props.insertExtraNode;
@@ -40,6 +50,7 @@ var Wave = function (_React$Component) {
             if (insertExtraNode) {
                 node.appendChild(extraNode);
             }
+            TransitionEvents.addStartEventListener(node, _this.onTransitionStart);
             TransitionEvents.addEndEventListener(node, _this.onTransitionEnd);
         };
         _this.bindAnimationEvent = function (node) {
@@ -48,7 +59,7 @@ var Wave = function (_React$Component) {
             }
             var onClick = function onClick(e) {
                 // Fix radio button click twice
-                if (e.target.tagName === 'INPUT') {
+                if (e.target.tagName === 'INPUT' || isHidden(e.target)) {
                     return;
                 }
                 _this.resetEffect(node);
@@ -57,6 +68,12 @@ var Wave = function (_React$Component) {
                 _this.clickWaveTimeoutId = window.setTimeout(function () {
                     return _this.onClick(node, waveColor);
                 }, 0);
+                raf.cancel(_this.animationStartId);
+                _this.animationStart = true;
+                // Render to trigger transition event cost 3 frames. Let's delay 10 frames to reset this.
+                _this.animationStartId = raf(function () {
+                    _this.animationStart = false;
+                }, 10);
             };
             node.addEventListener('click', onClick, true);
             return {
@@ -64,6 +81,16 @@ var Wave = function (_React$Component) {
                     node.removeEventListener('click', onClick, true);
                 }
             };
+        };
+        _this.onTransitionStart = function (e) {
+            if (_this.destroy) return;
+            var node = findDOMNode(_this);
+            if (!e || e.target !== node) {
+                return;
+            }
+            if (!_this.animationStart) {
+                _this.resetEffect(node);
+            }
         };
         _this.onTransitionEnd = function (e) {
             if (!e || e.animationName !== 'fadeEffect') {
@@ -104,6 +131,7 @@ var Wave = function (_React$Component) {
             if (insertExtraNode && this.extraNode && node.contains(this.extraNode)) {
                 node.removeChild(this.extraNode);
             }
+            TransitionEvents.removeStartEventListener(node, this.onTransitionStart);
             TransitionEvents.removeEndEventListener(node, this.onTransitionEnd);
         }
     }, {
@@ -116,7 +144,11 @@ var Wave = function (_React$Component) {
     }, {
         key: 'componentDidMount',
         value: function componentDidMount() {
-            this.instance = this.bindAnimationEvent(findDOMNode(this));
+            var node = findDOMNode(this);
+            if (node.nodeType !== 1) {
+                return;
+            }
+            this.instance = this.bindAnimationEvent(node);
         }
     }, {
         key: 'componentWillUnmount',
@@ -127,6 +159,7 @@ var Wave = function (_React$Component) {
             if (this.clickWaveTimeoutId) {
                 clearTimeout(this.clickWaveTimeoutId);
             }
+            this.destroy = true;
         }
     }, {
         key: 'render',
