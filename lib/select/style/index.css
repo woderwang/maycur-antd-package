@@ -259,10 +259,8 @@
 }
 .ant-select-selection__rendered {
   display: block;
-  margin-left: 11px;
-  margin-right: 11px;
   position: relative;
-  line-height: 30px;
+  line-height: 31px;
 }
 .ant-select-selection__rendered:after {
   content: '.';

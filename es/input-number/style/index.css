@@ -64,9 +64,6 @@
 .ant-input-number:focus + .ant-input-group-addon svg {
   color: #3296fa;
 }
-.ant-input-number:focus + .ant-input-suffix svg {
-  color: #3296fa;
-}
 .ant-input-number-disabled {
   background-color: #fff;
   border-bottom: 1px dashed #d9d9d9;

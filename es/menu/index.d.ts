@@ -68,7 +68,7 @@ export default class Menu extends React.Component<MenuProps, MenuState> {
     constructor(props: MenuProps);
     getChildContext(): {
         inlineCollapsed: any;
-        antdMenuTheme: "light" | "dark" | undefined;
+        antdMenuTheme: "dark" | "light" | undefined;
     };
     componentWillReceiveProps(nextProps: MenuProps, nextContext: SiderContext): void;
     restoreModeVerticalFromInline(): void;
