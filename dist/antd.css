@@ -2702,10 +2702,8 @@ mark {
 }
 .ant-select-selection__rendered {
   display: block;
-  margin-left: 11px;
-  margin-right: 11px;
   position: relative;
-  line-height: 30px;
+  line-height: 31px;
 }
 .ant-select-selection__rendered:after {
   content: '.';
@@ -3183,9 +3181,6 @@ mark {
   border-color: #40a9ff;
 }
 .ant-input:focus + .ant-input-group-addon svg {
-  color: #3296fa;
-}
-.ant-input:focus + .ant-input-suffix svg {
   color: #3296fa;
 }
 .ant-input-disabled {
@@ -3834,8 +3829,8 @@ textarea.ant-input {
 }
 .ant-btn-primary {
   color: #fff;
-  background-color: #1199FF;
-  border-color: #1199FF;
+  background-color: #1199ff;
+  border-color: #1199ff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
   -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
           box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
@@ -4298,7 +4293,7 @@ textarea.ant-input {
   background: transparent;
 }
 .ant-btn-gray:hover {
-  color: #1199FF;
+  color: #1199ff;
   background-color: #eee;
   border-color: #eee;
 }
@@ -4409,16 +4404,16 @@ textarea.ant-input {
   border: none;
 }
 .ant-btn-text:hover {
-  color: #2074D4;
+  color: #2074d4;
 }
 .ant-btn-text:focus {
-  color: #2074D4;
+  color: #2074d4;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 .ant-btn-text:active,
 .ant-btn-text.active {
-  color: #2074D4;
+  color: #2074d4;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -4437,7 +4432,7 @@ textarea.ant-input {
   border: none;
 }
 .ant-btn-text-danger {
-  color: #FF0000;
+  color: #ff0000;
   height: auto;
   padding: 0;
   -webkit-box-shadow: none;
@@ -4445,16 +4440,16 @@ textarea.ant-input {
   border: none;
 }
 .ant-btn-text-danger:hover {
-  color: #D0021B;
+  color: #d0021b;
 }
 .ant-btn-text-danger:focus {
-  color: #D0021B;
+  color: #d0021b;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 .ant-btn-text-danger:active,
 .ant-btn-text-danger.active {
-  color: #D0021B;
+  color: #d0021b;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -12006,8 +12001,8 @@ span.ant-radio + * {
   -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
           box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
   color: #fff;
-  background-color: #1199FF;
-  border-color: #1199FF;
+  background-color: #1199ff;
+  border-color: #1199ff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
   -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
           box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
@@ -12322,10 +12317,6 @@ span.ant-radio + * {
 }
 .ant-calendar-range .ant-calendar-input:focus + .ant-input-group-addon svg,
 .ant-calendar-range .ant-calendar-time-picker-input:focus + .ant-input-group-addon svg {
-  color: #3296fa;
-}
-.ant-calendar-range .ant-calendar-input:focus + .ant-input-suffix svg,
-.ant-calendar-range .ant-calendar-time-picker-input:focus + .ant-input-suffix svg {
   color: #3296fa;
 }
 .ant-calendar-range .ant-calendar-input-disabled,
@@ -13316,9 +13307,6 @@ li.ant-time-picker-panel-select-option-disabled:hover {
 .ant-time-picker-input:focus + .ant-input-group-addon svg {
   color: #3296fa;
 }
-.ant-time-picker-input:focus + .ant-input-suffix svg {
-  color: #3296fa;
-}
 .ant-time-picker-input-disabled {
   background-color: #fff;
   border-bottom: 1px dashed #d9d9d9;
@@ -13431,7 +13419,7 @@ textarea.ant-time-picker-input {
   line-height: 20px;
   height: 22px;
   padding: 0 7px;
-  border-radius: 4px;
+  border-radius: 0;
   border: 1px solid #d9d9d9;
   background: #fafafa;
   font-size: 12px;
@@ -13451,45 +13439,44 @@ textarea.ant-time-picker-input {
   color: rgba(0, 0, 0, 0.65);
 }
 .ant-tag-small {
-  font-size: 10px;
-  -webkit-transform: scale(0.8);
+  font-size: 12px;
   height: 18px;
   line-height: 18px;
   padding: 0 6px;
 }
 .ant-tag-mk {
   border: none;
-  border-radius: 1px;
+  border-radius: 0;
 }
 .ant-tag-normal {
   color: #fff;
-  border: 1px solid #3296fa;
+  border: none;
   background: #3296fa;
-  border-radius: 1px;
+  border-radius: 0;
 }
 .ant-tag-success {
   color: #fff;
-  border: 1px solid #00B600;
-  background: #00B600;
-  border-radius: 1px;
+  border: none;
+  background: #00b600;
+  border-radius: 0;
 }
 .ant-tag-info {
   color: #fff;
-  border: 1px solid #00B600;
-  background: #00B600;
-  border-radius: 1px;
+  border: none;
+  background: #00b600;
+  border-radius: 0;
 }
 .ant-tag-warning {
   color: #fff;
-  border: 1px solid #EFBC23;
-  background: #EFBC23;
-  border-radius: 1px;
+  border: none;
+  background: #efbc23;
+  border-radius: 0;
 }
 .ant-tag-danger {
   color: #fff;
-  border: 1px solid #00B600;
-  background: #00B600;
-  border-radius: 1px;
+  border: none;
+  background: #00b600;
+  border-radius: 0;
 }
 .ant-tag > a:first-child:last-child {
   display: inline-block;
@@ -14319,6 +14306,7 @@ textarea.ant-time-picker-input {
 .ant-form-item-required:before {
   display: inline-block;
   margin-right: 4px;
+  margin-left: -10px;
   content: "*";
   font-family: SimSun;
   line-height: 1;
@@ -14355,7 +14343,7 @@ input[type="checkbox"].disabled {
   margin: 0;
   padding: 0;
   list-style: none;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   vertical-align: top;
   display: -webkit-box;
   display: -webkit-flex;
@@ -14376,7 +14364,7 @@ input[type="checkbox"].disabled {
 }
 .ant-form-item-control > .ant-form-item:last-child,
 .ant-form-item [class^="ant-col-"] > .ant-form-item:only-child {
-  margin-bottom: -24px;
+  margin-bottom: -16px;
 }
 .ant-form-item-control {
   line-height: 39.9999px;
@@ -14395,17 +14383,18 @@ input[type="checkbox"].disabled {
   position: relative;
 }
 .ant-form-item-with-help {
-  margin-bottom: 5px;
+  margin-bottom: -3px;
 }
 .ant-form-item-label {
-  vertical-align: middle;
-  line-height: 40px;
+  line-height: 1.2;
   display: inline-block;
-  overflow: hidden;
+  overflow: visible;
   white-space: nowrap;
+  font-size: 13px;
 }
 .ant-form-item-label label {
   color: #757575;
+  font-size: 1em;
 }
 .ant-form-item-label label:after {
   content: " ";
@@ -14426,7 +14415,7 @@ input[type="checkbox"].disabled {
   -webkit-transition: color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   margin-top: -2px;
-  margin-bottom: 16px;
+  margin-bottom: 0;
   clear: both;
 }
 .ant-form-extra {
@@ -14545,11 +14534,11 @@ form .ant-input-group-wrapper {
 .ant-form-vertical .ant-form-item-label,
 .ant-col-24.ant-form-item-label,
 .ant-col-xl-24.ant-form-item-label {
-  padding: 0 0 8px;
+  padding: 0;
   margin: 0;
-  display: block;
+  display: inline-block;
   text-align: left;
-  line-height: 1.5;
+  line-height: 1.2;
 }
 .ant-form-vertical .ant-form-item-label label:after,
 .ant-col-24.ant-form-item-label label:after,
@@ -14574,21 +14563,21 @@ form .ant-input-group-wrapper {
     width: 100%;
   }
   .ant-form-item-label {
-    padding: 0 0 8px;
+    padding: 0;
     margin: 0;
-    display: block;
+    display: inline-block;
     text-align: left;
-    line-height: 1.5;
+    line-height: 1.2;
   }
   .ant-form-item-label label:after {
     display: none;
   }
   .ant-col-xs-24.ant-form-item-label {
-    padding: 0 0 8px;
+    padding: 0;
     margin: 0;
-    display: block;
+    display: inline-block;
     text-align: left;
-    line-height: 1.5;
+    line-height: 1.2;
   }
   .ant-col-xs-24.ant-form-item-label label:after {
     display: none;
@@ -14596,11 +14585,11 @@ form .ant-input-group-wrapper {
 }
 @media (max-width: 767px) {
   .ant-col-sm-24.ant-form-item-label {
-    padding: 0 0 8px;
+    padding: 0;
     margin: 0;
-    display: block;
+    display: inline-block;
     text-align: left;
-    line-height: 1.5;
+    line-height: 1.2;
   }
   .ant-col-sm-24.ant-form-item-label label:after {
     display: none;
@@ -14608,11 +14597,11 @@ form .ant-input-group-wrapper {
 }
 @media (max-width: 991px) {
   .ant-col-md-24.ant-form-item-label {
-    padding: 0 0 8px;
+    padding: 0;
     margin: 0;
-    display: block;
+    display: inline-block;
     text-align: left;
-    line-height: 1.5;
+    line-height: 1.2;
   }
   .ant-col-md-24.ant-form-item-label label:after {
     display: none;
@@ -14620,11 +14609,11 @@ form .ant-input-group-wrapper {
 }
 @media (max-width: 1199px) {
   .ant-col-lg-24.ant-form-item-label {
-    padding: 0 0 8px;
+    padding: 0;
     margin: 0;
-    display: block;
+    display: inline-block;
     text-align: left;
-    line-height: 1.5;
+    line-height: 1.2;
   }
   .ant-col-lg-24.ant-form-item-label label:after {
     display: none;
@@ -14632,11 +14621,11 @@ form .ant-input-group-wrapper {
 }
 @media (max-width: 1599px) {
   .ant-col-xl-24.ant-form-item-label {
-    padding: 0 0 8px;
+    padding: 0;
     margin: 0;
-    display: block;
+    display: inline-block;
     text-align: left;
-    line-height: 1.5;
+    line-height: 1.2;
   }
   .ant-col-xl-24.ant-form-item-label label:after {
     display: none;
@@ -14867,10 +14856,10 @@ form .ant-input-group-wrapper {
   color: #1890ff;
 }
 .ant-advanced-search-form .ant-form-item {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 .ant-advanced-search-form .ant-form-item-with-help {
-  margin-bottom: 5px;
+  margin-bottom: -3px;
 }
 .show-help-enter,
 .show-help-appear {
@@ -15079,9 +15068,6 @@ form .ant-input-group-wrapper {
   border-color: #40a9ff;
 }
 .ant-input-number:focus + .ant-input-group-addon svg {
-  color: #3296fa;
-}
-.ant-input-number:focus + .ant-input-suffix svg {
   color: #3296fa;
 }
 .ant-input-number-disabled {
@@ -16262,9 +16248,6 @@ textarea.ant-input-number {
 .ant-pagination-options-quick-jumper input:focus + .ant-input-group-addon svg {
   color: #3296fa;
 }
-.ant-pagination-options-quick-jumper input:focus + .ant-input-suffix svg {
-  color: #3296fa;
-}
 .ant-pagination-options-quick-jumper input-disabled {
   background-color: #fff;
   border-bottom: 1px dashed #d9d9d9;
@@ -16472,9 +16455,6 @@ textarea.ant-pagination-options-quick-jumper input {
   border-color: #40a9ff;
 }
 .ant-mention-wrapper .ant-mention-editor:focus + .ant-input-group-addon svg {
-  color: #3296fa;
-}
-.ant-mention-wrapper .ant-mention-editor:focus + .ant-input-suffix svg {
   color: #3296fa;
 }
 .ant-mention-wrapper .ant-mention-editor-disabled {
@@ -17647,19 +17627,23 @@ textarea.ant-mention-wrapper .ant-mention-editor {
   border-radius: 4px 4px 0 0;
   background: #fff;
   color: rgba(0, 0, 0, 0.65);
-  border-bottom: 1px solid #e8e8e8;
 }
 .ant-modal-body {
-  padding: 24px;
+  padding: 8px 24px;
   font-size: 14px;
   line-height: 1.5;
   word-wrap: break-word;
 }
 .ant-modal-footer {
-  border-top: 1px solid #e8e8e8;
-  padding: 10px 16px;
+  padding: 16px 24px;
   text-align: right;
   border-radius: 0 0 4px 4px;
+}
+.ant-modal-footer .ant-btn {
+  border: none;
+  font-size: 16px;
+  height: 36px;
+  padding: 0 22px;
 }
 .ant-modal-footer button + button {
   margin-left: 8px;

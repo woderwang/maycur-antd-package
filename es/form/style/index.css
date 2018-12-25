@@ -70,6 +70,7 @@
 .ant-form-item-required:before {
   display: inline-block;
   margin-right: 4px;
+  margin-left: -10px;
   content: "*";
   font-family: SimSun;
   line-height: 1;
@@ -106,7 +107,7 @@ input[type="checkbox"].disabled {
   margin: 0;
   padding: 0;
   list-style: none;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   vertical-align: top;
   display: -webkit-box;
   display: -webkit-flex;
@@ -127,7 +128,7 @@ input[type="checkbox"].disabled {
 }
 .ant-form-item-control > .ant-form-item:last-child,
 .ant-form-item [class^="ant-col-"] > .ant-form-item:only-child {
-  margin-bottom: -24px;
+  margin-bottom: -16px;
 }
 .ant-form-item-control {
   line-height: 39.9999px;
@@ -146,17 +147,18 @@ input[type="checkbox"].disabled {
   position: relative;
 }
 .ant-form-item-with-help {
-  margin-bottom: 5px;
+  margin-bottom: -3px;
 }
 .ant-form-item-label {
-  vertical-align: middle;
-  line-height: 40px;
+  line-height: 1.2;
   display: inline-block;
-  overflow: hidden;
+  overflow: visible;
   white-space: nowrap;
+  font-size: 13px;
 }
 .ant-form-item-label label {
   color: #757575;
+  font-size: 1em;
 }
 .ant-form-item-label label:after {
   content: " ";
@@ -177,7 +179,7 @@ input[type="checkbox"].disabled {
   -webkit-transition: color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   margin-top: -2px;
-  margin-bottom: 16px;
+  margin-bottom: 0;
   clear: both;
 }
 .ant-form-extra {
@@ -296,11 +298,11 @@ form .ant-input-group-wrapper {
 .ant-form-vertical .ant-form-item-label,
 .ant-col-24.ant-form-item-label,
 .ant-col-xl-24.ant-form-item-label {
-  padding: 0 0 8px;
+  padding: 0;
   margin: 0;
-  display: block;
+  display: inline-block;
   text-align: left;
-  line-height: 1.5;
+  line-height: 1.2;
 }
 .ant-form-vertical .ant-form-item-label label:after,
 .ant-col-24.ant-form-item-label label:after,
@@ -325,21 +327,21 @@ form .ant-input-group-wrapper {
     width: 100%;
   }
   .ant-form-item-label {
-    padding: 0 0 8px;
+    padding: 0;
     margin: 0;
-    display: block;
+    display: inline-block;
     text-align: left;
-    line-height: 1.5;
+    line-height: 1.2;
   }
   .ant-form-item-label label:after {
     display: none;
   }
   .ant-col-xs-24.ant-form-item-label {
-    padding: 0 0 8px;
+    padding: 0;
     margin: 0;
-    display: block;
+    display: inline-block;
     text-align: left;
-    line-height: 1.5;
+    line-height: 1.2;
   }
   .ant-col-xs-24.ant-form-item-label label:after {
     display: none;
@@ -347,11 +349,11 @@ form .ant-input-group-wrapper {
 }
 @media (max-width: 767px) {
   .ant-col-sm-24.ant-form-item-label {
-    padding: 0 0 8px;
+    padding: 0;
     margin: 0;
-    display: block;
+    display: inline-block;
     text-align: left;
-    line-height: 1.5;
+    line-height: 1.2;
   }
   .ant-col-sm-24.ant-form-item-label label:after {
     display: none;
@@ -359,11 +361,11 @@ form .ant-input-group-wrapper {
 }
 @media (max-width: 991px) {
   .ant-col-md-24.ant-form-item-label {
-    padding: 0 0 8px;
+    padding: 0;
     margin: 0;
-    display: block;
+    display: inline-block;
     text-align: left;
-    line-height: 1.5;
+    line-height: 1.2;
   }
   .ant-col-md-24.ant-form-item-label label:after {
     display: none;
@@ -371,11 +373,11 @@ form .ant-input-group-wrapper {
 }
 @media (max-width: 1199px) {
   .ant-col-lg-24.ant-form-item-label {
-    padding: 0 0 8px;
+    padding: 0;
     margin: 0;
-    display: block;
+    display: inline-block;
     text-align: left;
-    line-height: 1.5;
+    line-height: 1.2;
   }
   .ant-col-lg-24.ant-form-item-label label:after {
     display: none;
@@ -383,11 +385,11 @@ form .ant-input-group-wrapper {
 }
 @media (max-width: 1599px) {
   .ant-col-xl-24.ant-form-item-label {
-    padding: 0 0 8px;
+    padding: 0;
     margin: 0;
-    display: block;
+    display: inline-block;
     text-align: left;
-    line-height: 1.5;
+    line-height: 1.2;
   }
   .ant-col-xl-24.ant-form-item-label label:after {
     display: none;
@@ -618,10 +620,10 @@ form .ant-input-group-wrapper {
   color: #1890ff;
 }
 .ant-advanced-search-form .ant-form-item {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 .ant-advanced-search-form .ant-form-item-with-help {
-  margin-bottom: 5px;
+  margin-bottom: -3px;
 }
 .show-help-enter,
 .show-help-appear {

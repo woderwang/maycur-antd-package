@@ -454,8 +454,8 @@
   -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
           box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
   color: #fff;
-  background-color: #1199FF;
-  border-color: #1199FF;
+  background-color: #1199ff;
+  border-color: #1199ff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
   -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
           box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
@@ -770,10 +770,6 @@
 }
 .ant-calendar-range .ant-calendar-input:focus + .ant-input-group-addon svg,
 .ant-calendar-range .ant-calendar-time-picker-input:focus + .ant-input-group-addon svg {
-  color: #3296fa;
-}
-.ant-calendar-range .ant-calendar-input:focus + .ant-input-suffix svg,
-.ant-calendar-range .ant-calendar-time-picker-input:focus + .ant-input-suffix svg {
   color: #3296fa;
 }
 .ant-calendar-range .ant-calendar-input-disabled,
