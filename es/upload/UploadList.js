@@ -10,8 +10,12 @@ import Icon from '../icon';
 import Tooltip from '../tooltip';
 import Progress from '../progress';
 import classNames from 'classnames';
+var imageTypes = ['image', 'webp', 'png', 'svg', 'gif', 'jpg', 'jpeg', 'bmp'];
 // https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsDataURL
 var previewFile = function previewFile(file, callback) {
+    if (file.type && !imageTypes.includes(file.type)) {
+        callback('');
+    }
     var reader = new FileReader();
     reader.onloadend = function () {
         return callback(reader.result);
@@ -27,7 +31,6 @@ var extname = function extname(url) {
     var filenameWithoutSuffix = filename.split(/#|\?/)[0];
     return (/\.[^./\\]*$/.exec(filenameWithoutSuffix) || [''])[0];
 };
-var imageTypes = ['image', 'webp', 'png', 'svg', 'gif', 'jpg', 'jpeg', 'bmp'];
 var isImageUrl = function isImageUrl(file) {
     if (imageTypes.includes(file.type)) {
         return true;

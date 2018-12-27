@@ -51,7 +51,7 @@
 .ant-divider-horizontal.ant-divider-with-text:after,
 .ant-divider-horizontal.ant-divider-with-text-left:after,
 .ant-divider-horizontal.ant-divider-with-text-right:after {
-  content: '';
+  content: "";
   display: table-cell;
   position: relative;
   top: 50%;

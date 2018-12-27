@@ -54,6 +54,16 @@ export default function createPicker(TheCalendar) {
             _this.handleCalendarChange = function (value) {
                 _this.setState({ showDate: value });
             };
+            _this.handleOpenChange = function (open) {
+                var onOpenChange = _this.props.onOpenChange;
+
+                if (!('open' in _this.props)) {
+                    _this.setState({ open: open });
+                }
+                if (onOpenChange) {
+                    onOpenChange(open);
+                }
+            };
             _this.saveInput = function (node) {
                 _this.input = node;
             };
@@ -63,7 +73,8 @@ export default function createPicker(TheCalendar) {
             }
             _this.state = {
                 value: value,
-                showDate: value
+                showDate: value,
+                open: false
             };
             return _this;
         }
@@ -87,7 +98,8 @@ export default function createPicker(TheCalendar) {
 
                 var _state = this.state,
                     value = _state.value,
-                    showDate = _state.showDate;
+                    showDate = _state.showDate,
+                    open = _state.open;
 
                 var props = omit(this.props, ['onChange']);
                 var prefixCls = props.prefixCls,
@@ -139,13 +151,13 @@ export default function createPicker(TheCalendar) {
                         inputIcon
                     );
                 };
-                var class_name = classNames(props.className, props.pickerClass, _defineProperty({}, prefixCls + '-disabled', props.disabled));
+                var spanClassName = classNames(props.className, props.pickerClass, _defineProperty({}, prefixCls + '-disabled', props.disabled));
                 return React.createElement(
                     'span',
-                    { id: props.id, className: class_name, style: _extends({}, pickerStyle, props.style), onFocus: props.onFocus, onBlur: props.onBlur, onMouseEnter: props.onMouseEnter, onMouseLeave: props.onMouseLeave },
+                    { id: props.id, className: spanClassName, style: _extends({}, pickerStyle, props.style), onFocus: props.onFocus, onBlur: props.onBlur, onMouseEnter: props.onMouseEnter, onMouseLeave: props.onMouseLeave },
                     React.createElement(
                         RcDatePicker,
-                        _extends({}, props, pickerProps, { calendar: calendar, value: value, prefixCls: prefixCls + '-picker-container', style: props.popupStyle }),
+                        _extends({}, props, pickerProps, { calendar: calendar, value: value, prefixCls: prefixCls + '-picker-container', style: props.popupStyle, open: open, onOpenChange: this.handleOpenChange }),
                         input
                     )
                 );
@@ -153,16 +165,19 @@ export default function createPicker(TheCalendar) {
         }], [{
             key: 'getDerivedStateFromProps',
             value: function getDerivedStateFromProps(nextProps, prevState) {
-                var state = null;
+                var state = {};
+                var open = prevState.open;
+                if ('open' in nextProps) {
+                    state.open = nextProps.open;
+                    open = nextProps.open || false;
+                }
                 if ('value' in nextProps) {
-                    state = {
-                        value: nextProps.value
-                    };
-                    if (nextProps.value !== prevState.value) {
-                        state = _extends({}, state, { showDate: nextProps.value });
+                    state.value = nextProps.value;
+                    if (nextProps.value !== prevState.value || !open && nextProps.value !== prevState.showDate) {
+                        state.showDate = nextProps.value;
                     }
                 }
-                return state;
+                return Object.keys(state).length > 0 ? state : null;
             }
         }]);
 

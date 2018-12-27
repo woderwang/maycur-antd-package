@@ -15,11 +15,15 @@ function noop() {}
 var Alert = function (_React$Component) {
     _inherits(Alert, _React$Component);
 
-    function Alert(props) {
+    function Alert() {
         _classCallCheck(this, Alert);
 
-        var _this = _possibleConstructorReturn(this, (Alert.__proto__ || Object.getPrototypeOf(Alert)).call(this, props));
+        var _this = _possibleConstructorReturn(this, (Alert.__proto__ || Object.getPrototypeOf(Alert)).apply(this, arguments));
 
+        _this.state = {
+            closing: true,
+            closed: false
+        };
         _this.handleClose = function (e) {
             e.preventDefault();
             var dom = ReactDOM.findDOMNode(_this);
@@ -39,10 +43,6 @@ var Alert = function (_React$Component) {
             });
             (_this.props.afterClose || noop)();
         };
-        _this.state = {
-            closing: true,
-            closed: false
-        };
         return _this;
     }
 
@@ -52,20 +52,21 @@ var Alert = function (_React$Component) {
             var _classNames, _classNames2;
 
             var _props = this.props,
-                closable = _props.closable,
                 description = _props.description,
-                type = _props.type,
                 _props$prefixCls = _props.prefixCls,
                 prefixCls = _props$prefixCls === undefined ? 'ant-alert' : _props$prefixCls,
                 message = _props.message,
                 closeText = _props.closeText,
-                showIcon = _props.showIcon,
                 banner = _props.banner,
                 _props$className = _props.className,
                 className = _props$className === undefined ? '' : _props$className,
                 style = _props.style,
-                iconType = _props.iconType,
                 icon = _props.icon;
+            var _props2 = this.props,
+                closable = _props2.closable,
+                type = _props2.type,
+                showIcon = _props2.showIcon,
+                iconType = _props2.iconType;
             // banner模式默认有 Icon
 
             showIcon = banner && showIcon === undefined ? true : showIcon;

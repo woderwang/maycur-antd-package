@@ -61,9 +61,6 @@
 .ant-input:focus + .ant-input-group-addon svg {
   color: #3296fa;
 }
-.ant-input:focus + .ant-input-suffix svg {
-  color: #3296fa;
-}
 .ant-input-disabled {
   background-color: #fff;
   border-bottom: 1px dashed #d9d9d9;
@@ -183,7 +180,7 @@ textarea.ant-input {
 }
 .ant-input-group-addon > i:only-child:after {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 0;
   right: 0;

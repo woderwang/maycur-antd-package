@@ -8,7 +8,7 @@ export interface ProgressProps {
     type?: ProgressType;
     percent?: number;
     successPercent?: number;
-    format?: (percent?: number, successPercent?: number) => string;
+    format?: (percent?: number, successPercent?: number) => React.ReactNode;
     status?: 'success' | 'active' | 'exception';
     showInfo?: boolean;
     strokeWidth?: number;
@@ -22,15 +22,13 @@ export interface ProgressProps {
     size?: ProgressSize;
 }
 export default class Progress extends React.Component<ProgressProps, {}> {
-    static Line: any;
-    static Circle: any;
     static defaultProps: {
-        type: ProgressType;
+        type: string;
         percent: number;
         showInfo: boolean;
         trailColor: string;
         prefixCls: string;
-        size: ProgressSize;
+        size: string;
     };
     static propTypes: {
         status: PropTypes.Requireable<string>;

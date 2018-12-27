@@ -85,19 +85,23 @@
   border-radius: 4px 4px 0 0;
   background: #fff;
   color: rgba(0, 0, 0, 0.65);
-  border-bottom: 1px solid #e8e8e8;
 }
 .ant-modal-body {
-  padding: 24px;
+  padding: 8px 24px;
   font-size: 14px;
   line-height: 1.5;
   word-wrap: break-word;
 }
 .ant-modal-footer {
-  border-top: 1px solid #e8e8e8;
-  padding: 10px 16px;
+  padding: 16px 24px;
   text-align: right;
   border-radius: 0 0 4px 4px;
+}
+.ant-modal-footer .ant-btn {
+  border: none;
+  font-size: 16px;
+  height: 36px;
+  padding: 0 22px;
 }
 .ant-modal-footer button + button {
   margin-left: 8px;
@@ -137,7 +141,7 @@
   text-align: center;
 }
 .ant-modal-centered:before {
-  content: '';
+  content: "";
   display: inline-block;
   height: 100%;
   vertical-align: middle;

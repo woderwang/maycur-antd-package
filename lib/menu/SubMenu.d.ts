@@ -5,6 +5,7 @@ declare class SubMenu extends React.Component<any, any> {
         antdMenuTheme: PropTypes.Requireable<string>;
     };
     static isSubMenu: number;
+    context: any;
     private subMenu;
     onKeyDown: (e: React.MouseEvent<HTMLElement>) => void;
     saveSubMenu: (subMenu: any) => void;

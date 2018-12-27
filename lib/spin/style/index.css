@@ -99,7 +99,7 @@
   filter: progid\:DXImageTransform\.Microsoft\.Blur(PixelRadius\=1, MakeShadow\=false);
 }
 .ant-spin-blur:after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   right: 0;

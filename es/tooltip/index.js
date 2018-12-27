@@ -96,19 +96,6 @@ var Tooltip = function (_React$Component) {
                 autoAdjustOverflow: autoAdjustOverflow
             });
         }
-    }, {
-        key: 'isHoverTrigger',
-        value: function isHoverTrigger() {
-            var trigger = this.props.trigger;
-
-            if (!trigger || trigger === 'hover') {
-                return true;
-            }
-            if (Array.isArray(trigger)) {
-                return trigger.indexOf('hover') >= 0;
-            }
-            return false;
-        }
         // Fix Tooltip won't hide at disabled button
         // mouse events don't trigger at disabled button in Chrome
         // https://github.com/react-component/tooltip/issues/18
@@ -116,14 +103,14 @@ var Tooltip = function (_React$Component) {
     }, {
         key: 'getDisabledCompatibleChildren',
         value: function getDisabledCompatibleChildren(element) {
-            if ((element.type.__ANT_BUTTON || element.type === 'button') && element.props.disabled && this.isHoverTrigger()) {
+            if ((element.type.__ANT_BUTTON || element.type === 'button') && element.props.disabled) {
                 // Pick some layout related style properties up to span
                 // Prevent layout bugs like https://github.com/ant-design/ant-design/issues/5254
                 var _splitObject = splitObject(element.props.style, ['position', 'left', 'right', 'top', 'bottom', 'float', 'display', 'zIndex']),
                     picked = _splitObject.picked,
                     omitted = _splitObject.omitted;
 
-                var spanStyle = _extends({ display: 'inline-block' }, picked, { cursor: 'not-allowed' });
+                var spanStyle = _extends({ display: 'inline-block' }, picked, { cursor: 'not-allowed', width: element.props.block ? '100%' : null });
                 var buttonStyle = _extends({}, omitted, { pointerEvents: 'none' });
                 var child = cloneElement(element, {
                     style: buttonStyle,

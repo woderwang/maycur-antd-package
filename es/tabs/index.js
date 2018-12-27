@@ -83,8 +83,8 @@ var Tabs = function (_React$Component) {
                 children = _props.children,
                 _props$animated = _props.animated,
                 animated = _props$animated === undefined ? true : _props$animated,
-                tabBarExtraContent = _props.tabBarExtraContent,
                 hideAdd = _props.hideAdd;
+            var tabBarExtraContent = this.props.tabBarExtraContent;
 
             var tabPaneAnimated = (typeof animated === 'undefined' ? 'undefined' : _typeof(animated)) === 'object' ? animated.tabPane : animated;
             // card tabs should not have animation

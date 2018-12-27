@@ -63,11 +63,13 @@ var FilterMenu = function (_React$Component) {
             }
         };
         _this.handleMenuItemClick = function (info) {
+            var selectedKeys = _this.state.selectedKeys;
+
             if (!info.keyPath || info.keyPath.length <= 1) {
                 return;
             }
             var keyPathOfSelectedItem = _this.state.keyPathOfSelectedItem;
-            if (_this.state.selectedKeys.indexOf(info.key) >= 0) {
+            if (selectedKeys && selectedKeys.indexOf(info.key) >= 0) {
                 // deselect SubMenu child
                 delete keyPathOfSelectedItem[info.key];
             } else {
@@ -82,14 +84,15 @@ var FilterMenu = function (_React$Component) {
             var _this$props = _this.props,
                 column = _this$props.column,
                 locale = _this$props.locale,
-                prefixCls = _this$props.prefixCls;
+                prefixCls = _this$props.prefixCls,
+                selectedKeys = _this$props.selectedKeys;
 
-            var filterd = _this.props.selectedKeys.length > 0;
+            var filtered = selectedKeys && selectedKeys.length > 0;
             var filterIcon = column.filterIcon;
             if (typeof filterIcon === 'function') {
-                filterIcon = filterIcon(filterd);
+                filterIcon = filterIcon(filtered);
             }
-            var dropdownIconClass = classNames((_classNames = {}, _defineProperty(_classNames, prefixCls + '-selected', filterd), _defineProperty(_classNames, prefixCls + '-open', _this.getDropdownVisible()), _classNames));
+            var dropdownIconClass = classNames((_classNames = {}, _defineProperty(_classNames, prefixCls + '-selected', filtered), _defineProperty(_classNames, prefixCls + '-open', _this.getDropdownVisible()), _classNames));
             return filterIcon ? React.cloneElement(filterIcon, {
                 title: locale.filterTitle,
                 className: classNames(prefixCls + '-icon', dropdownIconClass, filterIcon.props.className),
@@ -169,7 +172,7 @@ var FilterMenu = function (_React$Component) {
             var selectedKeys = this.state.selectedKeys;
 
             var multiple = 'filterMultiple' in column ? column.filterMultiple : true;
-            var input = multiple ? React.createElement(Checkbox, { checked: selectedKeys.indexOf(item.value.toString()) >= 0 }) : React.createElement(Radio, { checked: selectedKeys.indexOf(item.value.toString()) >= 0 });
+            var input = multiple ? React.createElement(Checkbox, { checked: selectedKeys && selectedKeys.indexOf(item.value.toString()) >= 0 }) : React.createElement(Radio, { checked: selectedKeys && selectedKeys.indexOf(item.value.toString()) >= 0 });
             return React.createElement(
                 MenuItem,
                 { key: item.value },

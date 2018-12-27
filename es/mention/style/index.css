@@ -73,9 +73,6 @@
 .ant-mention-wrapper .ant-mention-editor:focus + .ant-input-group-addon svg {
   color: #3296fa;
 }
-.ant-mention-wrapper .ant-mention-editor:focus + .ant-input-suffix svg {
-  color: #3296fa;
-}
 .ant-mention-wrapper .ant-mention-editor-disabled {
   background-color: #fff;
   border-bottom: 1px dashed #d9d9d9;

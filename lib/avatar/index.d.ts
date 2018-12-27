@@ -24,8 +24,11 @@ export default class Avatar extends React.Component<AvatarProps, AvatarState> {
         shape: string;
         size: string;
     };
+    state: {
+        scale: number;
+        isImgExist: boolean;
+    };
     private avatarChildren;
-    constructor(props: AvatarProps);
     componentDidMount(): void;
     componentDidUpdate(prevProps: AvatarProps, prevState: AvatarState): void;
     setScale: () => void;

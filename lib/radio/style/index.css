@@ -65,7 +65,7 @@
   height: 100%;
   border-radius: 50%;
   border: 1px solid #1890ff;
-  content: '';
+  content: "";
   -webkit-animation: antRadioEffect 0.36s ease-in-out;
           animation: antRadioEffect 0.36s ease-in-out;
   -webkit-animation-fill-mode: both;

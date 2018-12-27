@@ -14,7 +14,7 @@ import classNames from 'classnames';
 import * as allIcons from '@ant-design/icons/lib/dist';
 import ReactIcon from '@ant-design/icons-react';
 import createFromIconfontCN from './IconFont';
-import { svgBaseProps, withThemeSuffix, removeTypeTheme, getThemeFromTypeName } from './utils';
+import { svgBaseProps, withThemeSuffix, removeTypeTheme, getThemeFromTypeName, alias } from './utils';
 import warning from '../_util/warning';
 import { getTwoToneColor, setTwoToneColor } from './twoTonePrimaryColor';
 // Initial setting
@@ -68,7 +68,7 @@ var Icon = function Icon(props) {
             var themeInName = getThemeFromTypeName(type);
             warning(!themeInName || theme === themeInName, 'The icon name \'' + type + '\' already specify a theme \'' + themeInName + '\',' + (' the \'theme\' prop \'' + theme + '\' will be ignored.'));
         }
-        computedType = withThemeSuffix(removeTypeTheme(type), dangerousTheme || theme || defaultTheme);
+        computedType = withThemeSuffix(removeTypeTheme(alias(type)), dangerousTheme || theme || defaultTheme);
         innerNode = React.createElement(ReactIcon, { className: svgClassString, type: computedType, primaryColor: twoToneColor });
     }
     return React.createElement(

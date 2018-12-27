@@ -53,12 +53,12 @@ var Affix = function (_React$Component) {
 
         var _this = _possibleConstructorReturn(this, (Affix.__proto__ || Object.getPrototypeOf(Affix)).apply(this, arguments));
 
-        _this.events = ['resize', 'scroll', 'touchstart', 'touchmove', 'touchend', 'pageshow', 'load'];
-        _this.eventHandlers = {};
         _this.state = {
             affixStyle: undefined,
             placeholderStyle: undefined
         };
+        _this.eventHandlers = {};
+        _this.events = ['resize', 'scroll', 'touchstart', 'touchmove', 'touchend', 'pageshow', 'load'];
         _this.saveFixedNode = function (node) {
             _this.fixedNode = node;
         };
@@ -121,11 +121,11 @@ var Affix = function (_React$Component) {
         key: "updatePosition",
         value: function updatePosition(e) {
             var _props2 = this.props,
-                offsetTop = _props2.offsetTop,
                 offsetBottom = _props2.offsetBottom,
                 offset = _props2.offset,
                 _props2$target = _props2.target,
                 target = _props2$target === undefined ? getDefaultTarget : _props2$target;
+            var offsetTop = this.props.offsetTop;
 
             var targetNode = target();
             // Backwards support

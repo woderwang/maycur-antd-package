@@ -59,7 +59,7 @@
   height: 100%;
   border-radius: 2px;
   border: 1px solid #1890ff;
-  content: '';
+  content: "";
   -webkit-animation: antCheckboxEffect 0.36s ease-in-out;
           animation: antCheckboxEffect 0.36s ease-in-out;
   -webkit-animation-fill-mode: both;

@@ -158,16 +158,16 @@
 .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-sorters:active .ant-table-column-sorter-down:not(.on) {
   color: rgba(0, 0, 0, 0.45);
 }
-.ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-align-right.ant-table-align-right.ant-table-column-has-sorters,
-.ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-align-right.ant-table-align-right.ant-table-column-has-filters {
-  padding-right: 30px;
+.ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-sorters,
+.ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-filters {
+  padding-right: 30px !important;
 }
-.ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-align-right.ant-table-align-right.ant-table-column-has-sorters.ant-table-column-has-filters {
-  padding-right: 54px;
+.ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-sorters.ant-table-column-has-filters {
+  padding-right: 54px !important;
 }
 .ant-table-thead > tr > th .ant-table-column-sorters:before {
   position: absolute;
-  content: '';
+  content: "";
   top: 0;
   left: 0;
   right: 0;
@@ -213,6 +213,12 @@
 .ant-table-tbody > tr:hover > td {
   background: #f7f7f7;
 }
+.ant-table-thead > tr.ant-table-row-hover:not(.ant-table-expanded-row) > td,
+.ant-table-tbody > tr.ant-table-row-hover:not(.ant-table-expanded-row) > td,
+.ant-table-thead > tr:hover:not(.ant-table-expanded-row) > td,
+.ant-table-tbody > tr:hover:not(.ant-table-expanded-row) > td {
+  background: #e6f7ff;
+}
 .ant-table-thead > tr:hover {
   background: none;
 }
@@ -224,7 +230,7 @@
   border-top: 1px solid #e8e8e8;
 }
 .ant-table-footer:before {
-  content: '';
+  content: "";
   height: 1px;
   background: #fafafa;
   position: absolute;
@@ -492,6 +498,9 @@ tr.ant-table-expanded-row,
 tr.ant-table-expanded-row:hover {
   background: #fbfbfb;
 }
+tr.ant-table-expanded-row td > .ant-table-wrapper {
+  margin: -8px -16px -9px;
+}
 .ant-table .ant-table-row-indent + .ant-table-row-expand-icon {
   margin-right: 8px;
 }
@@ -607,6 +616,9 @@ tr.ant-table-expanded-row:hover {
 .ant-table-middle > .ant-table-content > .ant-table-fixed-right > .ant-table-body-outer > .ant-table-body-inner > table > .ant-table-tbody > tr > td {
   padding: 6px 8px;
 }
+.ant-table-middle tr.ant-table-expanded-row td > .ant-table-wrapper {
+  margin: -6px -16px -7px;
+}
 .ant-table-small {
   border: 1px solid #e8e8e8;
   border-radius: 4px;
@@ -719,5 +731,9 @@ tr.ant-table-expanded-row:hover {
   border-right: 1px solid #e8e8e8;
 }
 .ant-table-small.ant-table-bordered .ant-table-fixed-right {
+  border-left: 1px solid #e8e8e8;
   border-right: 1px solid #e8e8e8;
+}
+.ant-table-small tr.ant-table-expanded-row td > .ant-table-wrapper {
+  margin: -4px -16px -5px;
 }

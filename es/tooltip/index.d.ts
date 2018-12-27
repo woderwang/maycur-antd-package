@@ -60,7 +60,6 @@ declare class Tooltip extends React.Component<TooltipProps, any> {
     onVisibleChange: (visible: boolean) => void;
     getPopupDomNode(): any;
     getPlacements(): any;
-    isHoverTrigger(): boolean;
     getDisabledCompatibleChildren(element: React.ReactElement<any>): React.ReactElement<any>;
     isNoTitle(): boolean;
     onPopupAlign: (domNode: HTMLElement, align: any) => void;

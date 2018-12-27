@@ -72,7 +72,7 @@
   padding: 0 10px;
 }
 .ant-steps-item-tail:after {
-  content: '';
+  content: "";
   display: inline-block;
   background: #e8e8e8;
   height: 1px;
@@ -90,7 +90,7 @@
   line-height: 32px;
 }
 .ant-steps-item-title:after {
-  content: '';
+  content: "";
   height: 1px;
   width: 9999px;
   background: #e8e8e8;
