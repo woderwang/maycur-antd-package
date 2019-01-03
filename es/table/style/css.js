@@ -1,6 +1,5 @@
 import '../../style/index.css';
 import './index.css';
-import './rcTable.css';
 // style dependencies
 import '../../radio/style/css';
 import '../../checkbox/style/css';
