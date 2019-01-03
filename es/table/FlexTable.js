@@ -1001,7 +1001,7 @@ Table.propTypes = {
     onChange: PropTypes.func,
     locale: PropTypes.object,
     dropdownPrefixCls: PropTypes.string,
-    OptionTable: PropTypes.node
+    OptionTable: PropTypes.func
 };
 Table.defaultProps = {
     dataSource: [],

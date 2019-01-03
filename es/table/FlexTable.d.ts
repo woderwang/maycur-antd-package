@@ -23,7 +23,7 @@ export default class Table<T> extends React.Component<TableProps<T>, TableState<
         onChange: PropTypes.Requireable<(...args: any[]) => any>;
         locale: PropTypes.Requireable<object>;
         dropdownPrefixCls: PropTypes.Requireable<string>;
-        OptionTable: PropTypes.Requireable<PropTypes.ReactNodeLike>;
+        OptionTable: PropTypes.Requireable<(...args: any[]) => any>;
     };
     static defaultProps: {
         dataSource: never[];
