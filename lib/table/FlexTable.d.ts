@@ -7,7 +7,6 @@ import { SpinProps } from '../spin';
 import { TableProps, TableSize, TableState, TableComponents, TableLocale, ColumnProps, TableStateFilters, SelectionItemSelectFn, SelectionInfo, PrepareParamsArgumentsReturn } from './interface';
 import { RadioChangeEvent } from '../radio';
 import { CheckboxChangeEvent } from '../checkbox';
-import './style/rcTable.less';
 export default class Table<T> extends React.Component<TableProps<T>, TableState<T>> {
     static Column: typeof Column;
     static ColumnGroup: typeof ColumnGroup;
@@ -24,6 +23,7 @@ export default class Table<T> extends React.Component<TableProps<T>, TableState<
         onChange: PropTypes.Requireable<(...args: any[]) => any>;
         locale: PropTypes.Requireable<object>;
         dropdownPrefixCls: PropTypes.Requireable<string>;
+        OptionTable: PropTypes.Requireable<PropTypes.ReactNodeLike>;
     };
     static defaultProps: {
         dataSource: never[];

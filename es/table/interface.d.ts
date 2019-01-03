@@ -129,6 +129,7 @@ export interface TableProps<T> {
     bodyStyle?: React.CSSProperties;
     className?: string;
     style?: React.CSSProperties;
+    OptionTable: React.ReactNode;
     children?: React.ReactNode;
 }
 export interface TableStateFilters {

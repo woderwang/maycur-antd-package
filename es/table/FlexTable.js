@@ -15,7 +15,7 @@ var __rest = this && this.__rest || function (s, e) {
 };
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-// import RcTable from './rc-table';
+import RcTable from 'rc-table';
 import * as PropTypes from 'prop-types';
 import classNames from 'classnames';
 import shallowEqual from 'shallowequal';
@@ -33,8 +33,6 @@ import Column from './Column';
 import ColumnGroup from './ColumnGroup';
 import createBodyRow from './createBodyRow';
 import { flatArray, treeMap, flatFilter, normalizeColumns } from './util';
-import './style/rcTable.less';
-var RcTable = require('./rc-table');
 function noop() {}
 function stopPropagation(e) {
     e.stopPropagation();
@@ -373,7 +371,8 @@ var Table = function (_React$Component) {
                 className = _a.className,
                 prefixCls = _a.prefixCls,
                 showHeader = _a.showHeader,
-                restProps = __rest(_a, ["style", "className", "prefixCls", "showHeader"]);
+                OptionTable = _a.OptionTable,
+                restProps = __rest(_a, ["style", "className", "prefixCls", "showHeader", "OptionTable"]);
             var data = _this.getCurrentPageData();
             var expandIconAsCell = _this.props.expandedRowRender && _this.props.expandIconAsCell !== false;
             var classString = classNames((_classNames = {}, _defineProperty(_classNames, prefixCls + '-' + _this.props.size, true), _defineProperty(_classNames, prefixCls + '-bordered', _this.props.bordered), _defineProperty(_classNames, prefixCls + '-empty', !data.length), _defineProperty(_classNames, prefixCls + '-without-column-header', !showHeader), _classNames));
@@ -388,7 +387,8 @@ var Table = function (_React$Component) {
             if ('expandIconColumnIndex' in restProps) {
                 expandIconColumnIndex = restProps.expandIconColumnIndex;
             }
-            return React.createElement(RcTable, _extends({ key: 'table' }, restProps, { onRow: _this.onRow, components: _this.components, prefixCls: prefixCls, data: data, columns: columns, showHeader: showHeader, className: classString, expandIconColumnIndex: expandIconColumnIndex, expandIconAsCell: expandIconAsCell, emptyText: !loading.spinning && locale.emptyText }));
+            var DrawTable = OptionTable || RcTable;
+            return React.createElement(DrawTable, _extends({ key: 'table' }, restProps, { onRow: _this.onRow, components: _this.components, prefixCls: prefixCls, data: data, columns: columns, showHeader: showHeader, className: classString, expandIconColumnIndex: expandIconColumnIndex, expandIconAsCell: expandIconAsCell, emptyText: !loading.spinning && locale.emptyText }));
         };
         warning(!('columnsPageRange' in props || 'columnsPageSize' in props), '`columnsPageRange` and `columnsPageSize` are removed, please use ' + 'fixed columns instead, see: https://u.ant.design/fixed-columns.');
         _this.columns = props.columns || normalizeColumns(props.children);
@@ -1000,7 +1000,8 @@ Table.propTypes = {
     bordered: PropTypes.bool,
     onChange: PropTypes.func,
     locale: PropTypes.object,
-    dropdownPrefixCls: PropTypes.string
+    dropdownPrefixCls: PropTypes.string,
+    OptionTable: PropTypes.node
 };
 Table.defaultProps = {
     dataSource: [],
