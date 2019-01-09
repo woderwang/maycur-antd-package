@@ -20,7 +20,6 @@
   clear: both;
 }
 .ant-table {
-  font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 12px;
   font-variant: tabular-nums;
   line-height: 1.5;
@@ -662,10 +661,6 @@ tr.ant-table-expanded-row td > .ant-table-wrapper {
 .ant-table-flex .ant-table tr {
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
-}
-.ant-table-flex .ant-table th,
-.ant-table-flex .ant-table td {
-  white-space: nowrap;
 }
 .ant-table-flex .ant-table-expand-icon-col {
   width: 34px;

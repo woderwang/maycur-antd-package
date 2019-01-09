@@ -9,7 +9,6 @@
 /* select */
 /* tag */
 .ant-mention-wrapper {
-  font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
   font-variant: tabular-nums;
   line-height: 1.5;
@@ -145,7 +144,6 @@ textarea.ant-mention-wrapper .ant-mention-editor {
   padding: 5px 11px;
 }
 .ant-mention-dropdown {
-  font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
   font-variant: tabular-nums;
   line-height: 1.5;
